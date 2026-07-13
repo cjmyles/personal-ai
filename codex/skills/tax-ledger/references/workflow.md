@@ -25,11 +25,19 @@ Never substitute an AI-written receipt for source evidence. For email-only evide
 
 Use `YYYY-MM-DD Supplier - Description.ext`. Keep names stable after linking them in the ledger.
 
+## Evidence status and retrieval
+
+Assess evidence independently for every transaction. Use `Complete` only when source evidence is saved in Drive and linked. Use `Login required` when the email identifies a document but authentication prevents retrieval.
+
+At the end of each run, combine all non-complete evidence into one retrieval batch. Group portal logins by supplier where useful, but retain one line per transaction so each recovered document can be matched and its status updated.
+
+After the user supplies a document, save it, verify the relevant details, update the Drive link, and change evidence status to `Complete`. Do not change transaction status unless the user also approves the transaction.
+
 ## Order of mutations
 
-1. Upload evidence to Drive.
+1. Save available evidence to Drive; otherwise record the evidence status and retrieval action.
 2. Add or update the ledger row.
-3. Read back and verify the row and link.
+3. Read back and verify the row, evidence status, and any evidence link or retrieval action.
 4. Apply Gmail labels.
 5. Archive only after review or explicit instruction.
 
