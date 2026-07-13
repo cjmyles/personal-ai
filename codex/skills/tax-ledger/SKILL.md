@@ -13,6 +13,7 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
 - Read [schema.md](references/schema.md) before creating or changing ledger rows.
 - Read [tax-profile.md](references/tax-profile.md) before classifying GST, Australian rental income, or Australian rental expenses.
 - Read [supplier-rules.md](references/supplier-rules.md) when classifying suppliers or GST.
+- Read [annual-checks.md](references/annual-checks.md) when checking completeness for a financial year or preparing a tax return.
 - Read [connected-resources.md](references/connected-resources.md) when locating current Gmail labels, Drive folders, or spreadsheets.
 
 ## Workflow
@@ -52,6 +53,11 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Apply the processed label only after evidence and ledger verification succeed.
    - Archive only after the user has reviewed the entries or explicitly instructs archiving.
    - Archive means remove Inbox; never trash the message.
+8. Reconcile annual expectations when requested.
+   - Compare the ledger against each applicable check in `annual-checks.md`.
+   - Report expected, found, missing, duplicate, needs review, and not applicable counts separately.
+   - Treat a failed count as a prompt to investigate, not proof that a transaction is missing.
+   - Keep check results separate from transaction rows; do not invent transactions to satisfy an expectation.
 
 ## Transaction review states
 
