@@ -11,8 +11,8 @@ Use a flat transaction table with these columns unless the target tab has an exp
 | Amount | Full GST-inclusive total paid or payable |
 | GST treatment | Supplier GST information plus whether a credit is claimed |
 | GST shown | GST stated on evidence, for information; blank when unsupported |
-| GST credit claimed | Credit claimed in the ledger; use zero for FY26 rental expenses under the recorded tax profile |
-| Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for FY26 rental expenses |
+| GST credit claimed | Credit claimed in the ledger; use zero for post-cancellation rental expenses under the recorded tax profile |
+| Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for post-cancellation rental expenses |
 | Evidence | Accountant-accessible Drive link |
 | Evidence status | Complete, Missing, Inadequate, or Login required |
 | Evidence action | Concise retrieval action when evidence is not complete |

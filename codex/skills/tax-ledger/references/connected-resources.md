@@ -10,10 +10,10 @@ Treat identifiers as configuration and verify names before mutating anything.
 
 ## Google Drive
 
-- Tax Ledger top-level folder: not yet configured
-- FY26 folder: not yet configured
-- FY26 Wentworth St folder: not yet configured
-- FY26 Original email files folder: not yet configured
+- Tax Ledger top-level folder: `1A00oTakX9Uz_P1os1PDdHB60E4Cbi8OU`
+- FY26 folder: `1ovxKiII6UxwzdFW_GirBYvL_LCRsjtDB`
+- FY26 Wentworth St folder: `1-Mtc1lAycvVYTCjfLmuyaFinUzpSWUmG`
+- FY26 Original email files folder: `1ChgktjUFQTm04bu9BpasrSVQb7FWnlzX`
 - FY27 folder: `1R0X-ofdNACncMhmuoz9ldbIL4o52tN7F`
 - FY27 Wentworth St folder: `13lDDrVeGIz49IBkXT3fH8lt7MhsXbjYI`
 - FY27 Original email files folder: `1sqKPYBC6cN8HjUngirj8DN4sAUnMVKsa`
