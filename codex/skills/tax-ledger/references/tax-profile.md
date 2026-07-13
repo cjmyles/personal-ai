@@ -11,10 +11,11 @@ These are user-supplied facts and ledger instructions. Treat them as personal co
 ## Ledger treatment
 
 - Continue tracking Australian rental income and Australian rental expenses after the residency change.
-- For FY26 Australian rental expenses, record the full GST-inclusive amount as the expense amount for tax review.
-- Record `GST credit claimed` as `0.00` for FY26 Australian rental expenses, even when the supplier document shows GST.
-- Preserve any GST shown on source evidence as informational data; do not subtract it from the FY26 rental expense.
-- Do not extend the FY26 rental-expense rule to unrelated business expenses or another financial year without an explicit recorded instruction.
+- For Australian rental expenses after the May 2025 GST-registration cancellation, record the full GST-inclusive amount as the expense amount for tax review.
+- Record `GST credit claimed` as `0.00` for those post-cancellation rental expenses, even when the supplier document shows GST.
+- Preserve any GST shown on source evidence as informational data; do not subtract it from the post-cancellation rental expense.
+- Apply this treatment to FY26, FY27, and later periods unless a new effective-dated GST registration fact is recorded.
+- Do not extend this rental-expense rule to unrelated business expenses or pre-cancellation transactions.
 
 ## Safeguards
 

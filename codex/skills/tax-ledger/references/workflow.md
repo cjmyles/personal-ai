@@ -16,10 +16,36 @@ Report three groups: process, needs review, and ignored. Explain ambiguous exclu
 
 1. Original supplier invoice or receipt attachment.
 2. Supplier-hosted invoice downloaded from a link.
-3. Original email saved as `.eml`, plus a readable PDF of the original message body.
+3. Original email saved as `.eml`, plus a PDF created with the email client's native Print/Save as PDF flow.
 4. Bank record or other corroboration when supplier evidence is unavailable.
 
-Never substitute an AI-written receipt for source evidence. For email-only evidence, retain the `.eml` for authenticity and use the PDF for convenient accountant access.
+Never substitute an AI-written receipt or extracted-text PDF for source evidence. For email-only evidence, retain the `.eml` for authenticity and use the email client's native print rendering for convenient accountant access. Load the message's normal rendered content before printing. If native printing is unavailable, keep the `.eml` and report the missing convenient PDF rather than manufacturing one.
+
+## Financial-year folder isolation
+
+Store evidence only within the financial year containing the transaction date. Use this hierarchy:
+
+```text
+Tax Ledger/
+  FY26/
+    Wentworth St/
+      Internet/
+      Energy/
+      Strata/
+      Original email files/
+        Internet/
+        Energy/
+        Strata/
+  FY27/
+    Wentworth St/
+      Internet/
+      Original email files/
+        Internet/
+```
+
+Create equivalent scope and category folders under each FY when needed. Use generic ledger categories for folder names. Keep the supplier in the filename, not in another folder level: for example, save `2025-12-01 Belong - Tax invoice.pdf` in `Wentworth St/Internet/`, not `Wentworth St/Internet/Belong/`. Save readable evidence such as invoices, receipts, and natively printed email PDFs in the relevant category folder. Save original `.eml` files in the matching category beneath that scope's `Original email files` folder.
+
+Before uploading, verify that the target folder is descended from the correct FY folder. Never use an FY27 folder for an FY26 transaction, or vice versa. Do not create or reorganise Drive folders without explicit user authorisation.
 
 ## Naming
 

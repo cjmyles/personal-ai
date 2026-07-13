@@ -13,6 +13,7 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
 - Read [schema.md](references/schema.md) before creating or changing ledger rows.
 - Read [tax-profile.md](references/tax-profile.md) before classifying GST, Australian rental income, or Australian rental expenses.
 - Read [supplier-rules.md](references/supplier-rules.md) when classifying suppliers or GST.
+- Read [annual-checks.md](references/annual-checks.md) when checking completeness for a financial year or preparing a tax return.
 - Read [connected-resources.md](references/connected-resources.md) when locating current Gmail labels, Drive folders, or spreadsheets.
 
 ## Workflow
@@ -31,8 +32,13 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Compare Gmail message ID, supplier reference, date, amount, and existing evidence link against the ledger.
    - Treat several emails about one charge as one transaction.
 4. Preserve evidence.
+   - Store evidence beneath the financial year, scope, and generic ledger category it belongs to: `Tax Ledger/<FY>/<scope>/<category>/`.
+   - Use category folders only. Keep supplier names in filenames; do not create supplier subfolders unless the user explicitly requests them.
+   - Keep a separate `Original email files` folder inside each financial-year scope folder, with matching category subfolders. Never reuse an evidence folder from another financial year.
+   - Verify the target folder's financial-year ancestry before uploading. If the matching FY folder is not configured, stop and ask before creating folders or saving evidence.
    - Save an original attached invoice or receipt when present.
-   - When no attachment exists, save the original RFC 822 email as `.eml` and a readable PDF rendered from its original HTML or plain-text body.
+   - When no attachment exists, save the original RFC 822 email as `.eml` and use the email client's native Print/Save as PDF flow to preserve the rendered message.
+   - Do not create an extracted-text, rewritten, or AI-formatted email PDF. If native printing is unavailable, retain the `.eml` and report that the convenient PDF copy could not be produced.
    - Do not fabricate or rewrite a supplier receipt. A generated summary is not source evidence.
    - Track evidence status independently from transaction review status.
    - Mark evidence as `Complete`, `Missing`, `Inadequate`, or `Login required`.
@@ -49,6 +55,11 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Apply the processed label only after evidence and ledger verification succeed.
    - Archive only after the user has reviewed the entries or explicitly instructs archiving.
    - Archive means remove Inbox; never trash the message.
+8. Reconcile annual expectations when requested.
+   - Compare the ledger against each applicable check in `annual-checks.md`.
+   - Report expected, found, missing, duplicate, needs review, and not applicable counts separately.
+   - Treat a failed count as a prompt to investigate, not proof that a transaction is missing.
+   - Keep check results separate from transaction rows; do not invent transactions to satisfy an expectation.
 
 ## Transaction review states
 
