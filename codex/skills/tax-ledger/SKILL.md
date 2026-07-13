@@ -31,6 +31,9 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Compare Gmail message ID, supplier reference, date, amount, and existing evidence link against the ledger.
    - Treat several emails about one charge as one transaction.
 4. Preserve evidence.
+   - Store evidence beneath the financial year it belongs to: `Tax Ledger/<FY>/<scope>/`.
+   - Keep a separate `Original email files` folder inside each financial-year scope folder. Never reuse an evidence folder from another financial year.
+   - Verify the target folder's financial-year ancestry before uploading. If the matching FY folder is not configured, stop and ask before creating folders or saving evidence.
    - Save an original attached invoice or receipt when present.
    - When no attachment exists, save the original RFC 822 email as `.eml` and a readable PDF rendered from its original HTML or plain-text body.
    - Do not fabricate or rewrite a supplier receipt. A generated summary is not source evidence.

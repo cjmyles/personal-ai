@@ -21,6 +21,24 @@ Report three groups: process, needs review, and ignored. Explain ambiguous exclu
 
 Never substitute an AI-written receipt for source evidence. For email-only evidence, retain the `.eml` for authenticity and use the PDF for convenient accountant access.
 
+## Financial-year folder isolation
+
+Store evidence only within the financial year containing the transaction date. Use this hierarchy:
+
+```text
+Tax Ledger/
+  FY26/
+    Wentworth St/
+      Original email files/
+  FY27/
+    Wentworth St/
+      Original email files/
+```
+
+Create equivalent scope folders under each FY when needed. Save readable evidence such as invoices, receipts, and rendered email PDFs in the FY-specific scope folder. Save original `.eml` files in that scope's `Original email files` folder.
+
+Before uploading, verify that the target folder is descended from the correct FY folder. Never use an FY27 folder for an FY26 transaction, or vice versa. Do not create or reorganise Drive folders without explicit user authorisation.
+
 ## Naming
 
 Use `YYYY-MM-DD Supplier - Description.ext`. Keep names stable after linking them in the ledger.
