@@ -15,13 +15,13 @@ Use a flat transaction table with these columns unless the target tab has an exp
 | Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for post-cancellation rental expenses |
 | Evidence | Accountant-accessible Drive link displayed as `View evidence`, not as a raw URL |
 | Evidence status | Complete, Missing, Inadequate, or Login required |
-| Evidence action | Concise retrieval action when evidence is not complete |
+| Evidence action | Concise retrieval action when evidence is not complete; use `N/A` when evidence is `Complete` |
 | Reference | Invoice, receipt, account, or transaction reference |
 | Due or paid date | Relevant settlement date |
-| Property | Property or business scope |
+| Property | Property or business scope; omit when the tab already has one explicit scope |
 | Transaction status | Review, Reviewed, or Auto |
 | Source email ID | Gmail message ID for duplicate prevention |
-| Notes | Exceptions and user decisions |
+| Notes | Material exceptions or user decisions not already encoded in the rules |
 
 Transaction status and evidence status are independent. Reviewing a transaction must not change its evidence status unless the evidence itself was checked.
 
