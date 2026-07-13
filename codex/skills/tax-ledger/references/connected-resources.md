@@ -14,6 +14,7 @@ Treat identifiers as configuration and verify names before mutating anything.
 - FY26 folder: `1ovxKiII6UxwzdFW_GirBYvL_LCRsjtDB`
 - FY26 Wentworth St folder: `1-Mtc1lAycvVYTCjfLmuyaFinUzpSWUmG`
 - FY26 Wentworth St Internet folder: `13WrlYdYMmFIlkZxh6DcfoyT8DjVkEKzK`
+- FY26 Wentworth St Energy folder: `1deO4BFadlBSIhh6XSWikTwBA4r7ZZ5DQ`
 - FY26 Wentworth St Strata folder: `1Uz5W5nM_gIR1C0CPrekbaPfkdtSurj_H`
 - FY26 Wentworth St Payment fees folder: `1huWNTd7w_QF_JcOXbZ9cvJNDT1spmfVf`
 - FY26 Original email files folder: `1ChgktjUFQTm04bu9BpasrSVQb7FWnlzX`
