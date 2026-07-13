@@ -4,7 +4,7 @@ These rules record workflow decisions, not tax advice. Re-check source evidence 
 
 | Supplier | Scope | Default category | Evidence or classification note |
 |---|---|---|---|
-| Belong | Wentworth St | Internet | Treat the service as Wentworth St even when an old Manly billing address appears. Confirm GST from the tax invoice or receipt. For post-cancellation transactions, use `Not claimable`; leave `GST shown` blank unless the source evidence states it. |
+| Belong | Wentworth St | Internet | Treat the service as Wentworth St even when an old Manly billing address appears. Confirm GST from the tax invoice or receipt. For post-cancellation transactions, use `No GST credit`; leave `GST shown` blank unless the source evidence states it. |
 | Sydney Water | Wentworth St | Water | Match the Wentworth property or account reference. Download the original bill when available; otherwise preserve the original email. Verify GST from the bill. |
 | EnergyAustralia | Wentworth St | Energy | Distinguish electricity and gas using account number and document description. Verify GST from each bill. |
 | Northern Beaches Council | Wentworth St | Council rates | Detect rates notices even without a Gmail label. Verify GST treatment from the notice and flag ambiguity. |

@@ -9,11 +9,11 @@ Use a flat transaction table with these columns unless the target tab has an exp
 | Category | Water, energy, internet, council rates, insurance, repairs, registration, software, and similar |
 | Description | Concise purpose |
 | Amount | Full GST-inclusive total paid or payable |
-| GST treatment | Supplier GST information plus whether a credit is claimed |
+| GST treatment | Whether a GST credit is claimed; use clear credit-focused wording |
 | GST shown | GST stated on evidence, for information; blank when unsupported |
 | GST credit claimed | Credit claimed in the ledger; use zero for post-cancellation rental expenses under the recorded tax profile |
 | Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for post-cancellation rental expenses |
-| Evidence | Accountant-accessible Drive link displayed as `View evidence`, not as a raw URL |
+| Evidence | Accountant-accessible Drive link displayed as `Link`, not as a raw URL |
 | Evidence status | Complete, Missing, Inadequate, or Login required |
 | Evidence action | Concise retrieval action when evidence is not complete; use `N/A` when evidence is `Complete` |
 | Reference | Invoice, receipt, account, or transaction reference |
@@ -25,7 +25,7 @@ Use a flat transaction table with these columns unless the target tab has an exp
 
 Transaction status and evidence status are independent. Reviewing a transaction must not change its evidence status unless the evidence itself was checked.
 
-For `GST treatment`, use `Not claimable` when GST may be included but no GST credit is claimed under the recorded tax profile. Do not combine it with `N/A`. Use `N/A` only when GST genuinely does not apply to the transaction.
+For `GST treatment`, use `No GST credit` when GST may be included but the ledger claims no GST credit under the recorded tax profile. This describes the GST credit only; it does not mean the expense is excluded from income-tax review. Do not combine it with `N/A`. Use `N/A` only when GST genuinely does not apply to the transaction.
 
 ## Evidence retrieval batch
 
