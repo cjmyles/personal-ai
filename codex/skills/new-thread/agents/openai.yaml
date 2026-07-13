@@ -1,0 +1,3 @@
+interface:
+  display_name: "new-thread"
+  short_description: "Prepare a context-rich prompt for a fresh Codex task"

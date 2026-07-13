@@ -1,0 +1,3 @@
+interface:
+  display_name: "git-status"
+  short_description: "Report worktree commit and upstream status"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "git-push"
+  short_description: "Commit and push selected changes safely"

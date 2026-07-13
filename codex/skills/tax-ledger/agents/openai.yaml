@@ -1,0 +1,3 @@
+interface:
+  display_name: "Tax Ledger"
+  short_description: "Process tax evidence into a reviewable ledger"

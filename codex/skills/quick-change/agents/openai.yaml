@@ -1,0 +1,3 @@
+interface:
+  display_name: "quick-change"
+  short_description: "Make a small targeted implementation change quickly"

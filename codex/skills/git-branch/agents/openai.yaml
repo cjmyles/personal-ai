@@ -1,0 +1,3 @@
+interface:
+  display_name: "git-branch"
+  short_description: "Create a safe fresh Git branch from the latest default branch"
