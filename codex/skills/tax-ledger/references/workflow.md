@@ -4,6 +4,12 @@
 
 Search the relevant financial-year and property labels, then expand using known suppliers and account numbers, the property address and identifiers, financial document terms, and recurring ledger suppliers.
 
+For a requested transaction-date window:
+
+- Search Gmail with at least a two-day buffer before and after the requested dates. Expand it when a supplier is known to deliver documents later.
+- Filter results using the supplier's invoice, receipt, transaction, service, or payment date, according to the date represented by the ledger entry.
+- Do not exclude a transaction because its email arrived outside the requested window. Include a 1 July payment when its receipt arrived on 2 July.
+
 Report three groups: process, needs review, and ignored. Explain ambiguous exclusions briefly.
 
 ## Evidence precedence

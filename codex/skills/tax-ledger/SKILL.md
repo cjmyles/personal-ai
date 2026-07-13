@@ -23,6 +23,8 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
 2. Find candidates broadly.
    - Use Gmail labels as signals, not the sole source of truth.
    - Also search known suppliers, property addresses, account references, and terms such as invoice, receipt, bill, rates, levy, renewal, and payment.
+   - For a requested transaction-date window, search Gmail with at least a two-day buffer on both sides so delayed receipts are not missed.
+   - Filter buffered results by the supplier's document, transaction, or payment date; do not use Gmail arrival date as the transaction date.
    - Include unlabelled likely tax items in the review report.
 3. Prevent duplicates.
    - Compare Gmail message ID, supplier reference, date, amount, and existing evidence link against the ledger.
