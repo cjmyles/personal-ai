@@ -13,7 +13,7 @@ Use a flat transaction table with these columns unless the target tab has an exp
 | GST shown | GST stated on evidence, for information; blank when unsupported |
 | GST credit claimed | Credit claimed in the ledger; use zero for post-cancellation rental expenses under the recorded tax profile |
 | Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for post-cancellation rental expenses |
-| Evidence | Accountant-accessible Drive link |
+| Evidence | Accountant-accessible Drive link displayed as `View evidence`, not as a raw URL |
 | Evidence status | Complete, Missing, Inadequate, or Login required |
 | Evidence action | Concise retrieval action when evidence is not complete |
 | Reference | Invoice, receipt, account, or transaction reference |
