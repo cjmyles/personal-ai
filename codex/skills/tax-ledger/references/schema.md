@@ -25,6 +25,8 @@ Use a flat transaction table with these columns unless the target tab has an exp
 
 Transaction status and evidence status are independent. Reviewing a transaction must not change its evidence status unless the evidence itself was checked.
 
+For `GST treatment`, use `Not claimable` when GST may be included but no GST credit is claimed under the recorded tax profile. Do not combine it with `N/A`. Use `N/A` only when GST genuinely does not apply to the transaction.
+
 ## Evidence retrieval batch
 
 For every row whose evidence status is not `Complete`, produce a combined batch list containing:
