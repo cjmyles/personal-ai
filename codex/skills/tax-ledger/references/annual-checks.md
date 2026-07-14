@@ -27,6 +27,7 @@ Keep a `Financial-year boundary allocation` row in the annual-check results with
 | Belong internet | 12 monthly charges | One distinct Belong internet charge for each month from July through June | Missing or repeated month; more or fewer than 12 charges; service start, cancellation, credit, refund, or billing-cycle change; material amount variation; incomplete evidence |
 | EnergyAustralia electricity | 4 quarterly bills | Four distinct electricity bills whose service periods provide continuous coverage through the financial year | Missing or repeated period; more or fewer than 4 bills; a gap or overlap between service periods; account or billing-frequency change; credit, refund, or irregular charge; incomplete evidence |
 | EnergyAustralia gas | 4 quarterly bills | Four distinct gas bills whose service periods provide continuous coverage through the financial year | Missing or repeated period; more or fewer than 4 bills; a gap or overlap between service periods; account or billing-frequency change; credit, refund, or irregular charge; incomplete evidence |
+| Sydney Water | 4 quarterly bills | Four distinct Sydney Water bills for the Wentworth St payment number, with one bill due in each quarter | Missing or repeated quarter; more or fewer than 4 bills; account change; failed payment, late fee, credit, refund, or irregular charge; incomplete evidence |
 
 ## Results
 
