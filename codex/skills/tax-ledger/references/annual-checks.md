@@ -20,6 +20,12 @@ For every financial year, inspect the two weeks on both sides of the opening and
 
 Keep a `Financial-year boundary allocation` row in the annual-check results with status `Review` until both boundary windows have been reconciled. Do not create an adjacent-year ledger or invent a transaction when source evidence or the adjacent ledger is unavailable.
 
+## Prior-year tax return preparation fee
+
+For every financial year, check whether an accountant or registered tax agent issued or was paid an invoice during the target year for preparing the previous year's tax return. Search Gmail, Drive, and the existing ledger, then confirm any qualifying fee is recorded once using the supplier document or payment date and linked to suitable evidence.
+
+Keep a `Prior-year tax return preparation fee` row in the annual-check results with status `Review` until the check is completed. Use `Pass` when the fee is found and recorded, and `Not applicable` only when no such fee was incurred in the target year. Do not treat an ATO income-tax assessment, tax payable balance, penalty, or interest charge as a tax-return preparation fee. Flag any uncertainty for accountant confirmation rather than creating a transaction.
+
 ## Wentworth St
 
 | Check | Expected for a full year | Match rule | Review triggers |
