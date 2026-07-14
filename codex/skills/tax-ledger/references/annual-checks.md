@@ -26,6 +26,14 @@ For every financial year, check whether an accountant or registered tax agent is
 
 Keep a `Prior-year tax return preparation fee` row in the annual-check results with status `Review` until the check is completed. Use `Pass` when the fee is found and recorded, and `Not applicable` only when no such fee was incurred in the target year. Do not treat an ATO income-tax assessment, tax payable balance, penalty, or interest charge as a tax-return preparation fee. Flag any uncertainty for accountant confirmation rather than creating a transaction.
 
+## Personal business expenses
+
+| Check | Expected for a full year | Match rule | Review triggers |
+|---|---:|---|---|
+| Apple iCloud | 12 monthly charges while the subscription is active | One distinct Apple iCloud charge for each active month | Missing or repeated month; subscription, plan, price, or Apple ID change; credit or refund; personal or mixed use; incomplete evidence |
+| Optus mobile phone | 12 monthly bills while the service is active | One distinct Optus mobile bill for each active month | Missing or repeated month; service, plan, phone number, or price change; handset or device component; credit or refund; personal or mixed use; incomplete evidence |
+| BizCover insurance | One active annual policy or a complete series of instalments covering the financial year | Match the policy schedule and tax invoice to the coverage period, then reconcile each payment once | Missing or overlapping coverage; renewal, cancellation, refund, policy, insurer, or payment-frequency change; incomplete evidence |
+
 ## Wentworth St
 
 | Check | Expected for a full year | Match rule | Review triggers |
@@ -34,6 +42,9 @@ Keep a `Prior-year tax return preparation fee` row in the annual-check results w
 | EnergyAustralia electricity | 4 quarterly bills | Four distinct electricity bills whose service periods provide continuous coverage through the financial year | Missing or repeated period; more or fewer than 4 bills; a gap or overlap between service periods; account or billing-frequency change; credit, refund, or irregular charge; incomplete evidence |
 | EnergyAustralia gas | 4 quarterly bills | Four distinct gas bills whose service periods provide continuous coverage through the financial year | Missing or repeated period; more or fewer than 4 bills; a gap or overlap between service periods; account or billing-frequency change; credit, refund, or irregular charge; incomplete evidence |
 | Sydney Water | 4 quarterly bills | Four distinct Sydney Water bills for the Wentworth St payment number, with one bill due in each quarter | Missing or repeated quarter; more or fewer than 4 bills; account change; failed payment, late fee, credit, refund, or irregular charge; incomplete evidence |
+| Home contents insurance | One active policy covering the property through the financial year, or a complete series of instalments | Match the policy schedule and renewal to the Wentworth St address and coverage period, then reconcile each payment once | Missing or overlapping coverage; renewal, cancellation, refund, insurer, policy scope, or payment-frequency change; building, landlord, contents, private, or mixed-use ambiguity; incomplete evidence |
+| STRA registration | A current registration or renewal for every period in which the property operated as short-term rental accommodation | Treat the invoice, payment confirmation, and renewal notice for one registration payment as one transaction | Registration or expiry gap; duplicate renewal; refund; property or registration-number mismatch; incomplete evidence |
+| Northern Beaches Council rates | The annual rates notice and every required instalment or payment for the financial year | Match the annual notice, instalment notices, adjustments, and payments by property and account reference; use the source arrangement rather than assuming a fixed instalment count | Missing notice or required payment; duplicate; adjustment, refund, or account change; property mismatch; incomplete evidence |
 
 ## Results
 
