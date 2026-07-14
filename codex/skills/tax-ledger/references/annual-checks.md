@@ -14,6 +14,12 @@ For each applicable check:
 
 Use `Review` when the count differs, periods overlap, service started or ended during the year, billing frequency changed, or evidence is incomplete. A matching count does not override other transaction or evidence reviews.
 
+## Financial-year boundaries
+
+For every financial year, inspect the two weeks on both sides of the opening and closing 1 July boundaries. Compare the target ledger with the adjacent financial-year ledgers and source evidence. Assign each transaction using the supplier document, transaction, or payment date rather than the email arrival date, and report omissions, duplicates, or items filed in the wrong financial year.
+
+Keep a `Financial-year boundary allocation` row in the annual-check results with status `Review` until both boundary windows have been reconciled. Do not create an adjacent-year ledger or invent a transaction when source evidence or the adjacent ledger is unavailable.
+
 ## Wentworth St
 
 | Check | Expected for a full year | Match rule | Review triggers |
