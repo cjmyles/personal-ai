@@ -11,21 +11,21 @@ Use a flat transaction table with these columns unless the target tab has an exp
 | Amount | Full GST-inclusive total paid or payable |
 | GST treatment | Whether a GST credit is claimed; use clear credit-focused wording |
 | GST shown | GST stated on evidence, for information; blank when unsupported |
-| GST credit claimed | Credit claimed in the ledger; use zero for post-cancellation rental expenses under the recorded tax profile |
-| Tax claim amount | Expense amount carried for tax review; use the full GST-inclusive amount for post-cancellation rental expenses |
-| Evidence | Accountant-accessible Drive link displayed as `Link`, not as a raw URL |
+| GST credit claimed | Credit claimed in the ledger under the applicable configured tax-profile instruction |
+| Tax claim amount | Expense amount carried for tax review under the applicable configured instruction |
+| Evidence | Accountant-accessible stored-evidence link displayed as `Link`, not as a raw URL |
 | Evidence status | Complete, Missing, Inadequate, or Login required |
 | Evidence action | Concise retrieval action when evidence is not complete; use `N/A` when evidence is `Complete` |
 | Reference | Invoice, receipt, account, or transaction reference |
 | Due or paid date | Relevant settlement date |
-| Property | Property or business scope; omit when the tab already has one explicit scope |
+| Scope | Property, business, or other configured scope; omit when the tab already has one explicit scope |
 | Transaction status | Review, Reviewed, or Auto |
 | Source email ID | Gmail message ID for duplicate prevention |
 | Notes | Material exceptions or user decisions not already encoded in the rules |
 
 Transaction status and evidence status are independent. Reviewing a transaction must not change its evidence status unless the evidence itself was checked.
 
-For `GST treatment`, use `No GST credit` when GST may be included but the ledger claims no GST credit under the recorded tax profile. This describes the GST credit only; it does not mean the expense is excluded from income-tax review. Do not combine it with `N/A`. Use `N/A` only when GST genuinely does not apply to the transaction.
+For `GST treatment`, use `No GST credit` when GST may be included but the applicable configuration claims no GST credit. This describes the GST credit only; it does not mean the expense is excluded from income-tax review. Do not combine it with `N/A`. Use `N/A` only when GST genuinely does not apply to the transaction.
 
 ## Evidence retrieval batch
 

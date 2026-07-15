@@ -2,7 +2,7 @@
 
 ## Selection
 
-Search the relevant financial-year and property labels, then expand using known suppliers and account numbers, the property address and identifiers, financial document terms, and recurring ledger suppliers.
+Search the configured financial-year and scope labels, then expand using configured suppliers, account numbers, addresses, identifiers, financial-document terms, and recurring checks.
 
 For a requested transaction-date window:
 
@@ -23,27 +23,18 @@ Never substitute an AI-written receipt or extracted-text PDF for source evidence
 
 ## Financial-year folder isolation
 
-Store evidence only within the financial year containing the transaction date. Use this hierarchy:
+Store evidence only within the financial year containing the transaction date. Use the configured hierarchy, normally:
 
 ```text
 Tax Ledger/
-  FY26/
-    Wentworth St/
-      Internet/
-      Energy/
-      Strata/
+  <FY>/
+    <scope>/
+      <category>/
       Original email files/
-        Internet/
-        Energy/
-        Strata/
-  FY27/
-    Wentworth St/
-      Internet/
-      Original email files/
-        Internet/
+        <category>/
 ```
 
-Create equivalent scope and category folders under each FY when needed. Use generic ledger categories for folder names. Keep the supplier in the filename, not in another folder level: for example, save `2025-12-01 Belong - Tax invoice.pdf` in `Wentworth St/Internet/`, not `Wentworth St/Internet/Belong/`. Save readable evidence such as invoices, receipts, and natively printed email PDFs in the relevant category folder. Save original `.eml` files in the matching category beneath that scope's `Original email files` folder.
+Create equivalent scope and category folders under each FY only when authorised. Use generic ledger categories for folder names. Keep the supplier in the filename, not in another folder level: save `YYYY-MM-DD Supplier - Tax invoice.pdf` in `<scope>/<category>/`, not `<scope>/<category>/<supplier>/`. Save readable evidence in the category folder and original `.eml` files in the matching category beneath `Original email files`.
 
 Before uploading, verify that the target folder is descended from the correct FY folder. Never use an FY27 folder for an FY26 transaction, or vice versa. Do not create or reorganise Drive folders without explicit user authorisation.
 
@@ -64,7 +55,7 @@ After the user supplies a document, save it, verify the relevant details, update
 1. Save available evidence to Drive; otherwise record the evidence status and retrieval action.
 2. Add or update the ledger row.
 3. Read back and verify the row, evidence status, and any evidence link or retrieval action.
-4. Apply Gmail labels.
+4. Apply configured email labels.
 5. Archive only after review or explicit instruction.
 
 If a step fails, stop before later steps and report the partial state.
