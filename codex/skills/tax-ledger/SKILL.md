@@ -60,6 +60,7 @@ Use this skill for a configuration-backed, review-first tax-record workflow. Use
    - Archive means remove Inbox; never trash the message.
 8. Reconcile annual expectations when requested.
    - Compare the ledger against each applicable active check in the configuration workbook using `annual-checks.md`.
+   - When prior-year records are available, compare recurring categories, suppliers, and historical treatment to find likely omissions; never copy prior-year transactions into the current ledger.
    - Report expected, found, missing, duplicate, needs review, and not applicable counts separately.
    - Treat a failed count as a prompt to investigate, not proof that a transaction is missing.
    - Keep check results separate from transaction rows; do not invent transactions to satisfy an expectation.

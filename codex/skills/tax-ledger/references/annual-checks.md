@@ -20,6 +20,18 @@ Load active expectations from the configuration workbook's `Recurring Checks` ta
 
 For boundary checks, use the configured window around both financial-year boundaries and assign transactions using the supplier document, transaction, or payment date rather than email arrival date. Do not create an adjacent-year ledger or invent a transaction when evidence or an adjacent ledger is unavailable.
 
+## Prior-year comparison
+
+When a prior-year ledger, accountant-prepared schedule, or lodged return is available:
+
+1. Compare its recurring categories and suppliers with the current-year configuration and ledger.
+2. Use the comparison to identify likely omissions, discontinued services, new suppliers, and historical classification or business-use treatment.
+3. Derive every current-year transaction, date, amount, GST value, and evidence link from current-year source evidence. Never copy a transaction from a prior-year spreadsheet.
+4. Treat prior-year tax treatment as a historical signal, not proof that the current-year treatment is correct. Record any approved carry-forward rule in configuration or an effective-dated FY override.
+5. Mark changed or unsupported treatment `Review`, including changes in use, plan, supplier, tax residency, GST registration, or evidence quality.
+
+Keep personal supplier names and historical percentages in the private configuration workbook, not in this generic skill.
+
 ## Results
 
 Keep annual-check results separate from the flat transaction tables. When a spreadsheet check tab is authorised, use one row per check with:
