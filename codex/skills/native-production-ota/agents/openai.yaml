@@ -1,0 +1,4 @@
+interface:
+  display_name: "Native Production OTA"
+  short_description: "Release a native production OTA from PR to EAS Update."
+  default_prompt: "Commit and push this native change, open and merge a PR, validate it, tag main, and publish a production OTA."
