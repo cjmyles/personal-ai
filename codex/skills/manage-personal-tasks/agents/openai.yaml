@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Personal Tasks"
+  short_description: "Manage and prioritise Craig’s live Trello tasks"
+  default_prompt: "Use $manage-personal-tasks to tell me what I should do next."
