@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage FPL Draft"
+  short_description: "League-aware waivers, injuries and weekly picks"
+  default_prompt: "Use $manage-fpl-draft to review my FPL Draft team, waiver opportunities and players nearing an injury return."
