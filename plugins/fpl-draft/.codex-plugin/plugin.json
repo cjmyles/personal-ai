@@ -1,0 +1,26 @@
+{
+  "name": "fpl-draft",
+  "version": "0.1.0",
+  "description": "League-aware Premier League Fantasy Draft analysis, injury-return monitoring and waiver planning.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": ["fpl", "fantasy-draft", "premier-league", "waivers", "injuries"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FPL Draft",
+    "shortDescription": "League-aware waivers, injuries and team selection.",
+    "longDescription": "Manage a closed-market Premier League Fantasy Draft league using live ownership, available players, fixtures, injury-return evidence and waiver priority.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": ["Analysis", "Web search"],
+    "defaultPrompt": [
+      "Review my FPL Draft squad and available players.",
+      "Find injury-return waiver targets in my league.",
+      "Check my proposed waivers and rank the alternatives."
+    ]
+  }
+}

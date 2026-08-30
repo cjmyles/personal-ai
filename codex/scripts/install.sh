@@ -8,7 +8,7 @@ backup_root="$destination/.personal-ai-backups/$(date +%Y%m%d-%H%M%S)"
 "$repo_root/codex/scripts/validate.sh"
 mkdir -p "$destination"
 
-for skill in "$repo_root"/codex/skills/*; do
+for skill in "$repo_root"/codex/skills/* "$repo_root"/plugins/*/skills/*; do
   [ -d "$skill" ] || continue
   name=$(basename "$skill")
   target="$destination/$name"
