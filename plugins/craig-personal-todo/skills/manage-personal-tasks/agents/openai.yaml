@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Personal Tasks"
+  short_description: "Trello-backed personal todo management"
+  default_prompt: "Use $manage-personal-tasks to review my Trello Personal Todo board and tell me what to do next."

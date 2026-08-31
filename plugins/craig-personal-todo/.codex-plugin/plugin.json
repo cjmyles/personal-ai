@@ -1,0 +1,35 @@
+{
+  "name": "craig-personal-todo",
+  "version": "0.1.0",
+  "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": [
+    "personal-todo",
+    "trello",
+    "tasks",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Craig Personal Todo",
+    "shortDescription": "Manage Craig's Trello Personal Todo board.",
+    "longDescription": "Read, prioritise and update Craig's personal todo system using the Trello Personal Todo board as the source of truth across desktop and mobile ChatGPT Work.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Task management",
+      "Trello"
+    ],
+    "defaultPrompt": [
+      "Use $manage-personal-tasks to tell me what to do next from my Trello Personal Todo board.",
+      "Use $manage-personal-tasks to add, update, move or complete a personal todo card.",
+      "Use $manage-personal-tasks to review my Today / Now, This Week and Waiting tasks."
+    ],
+    "brandColor": "#0079BF"
+  }
+}
