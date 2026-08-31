@@ -8,7 +8,7 @@ The Draft API is used by the official site but is not a stable, documented publi
 
 | Purpose | Method and path | Useful fields |
 | --- | --- | --- |
-| Player and team metadata | `GET /api/bootstrap-static` | `elements`, `teams`, `element_types`; player `status`, `news`, `news_return`, playing chances, form and rank |
+| Player and team metadata | `GET /api/bootstrap-static` | `elements`, `teams`, `element_types`, future `fixtures`; player names, status, news, playing chances, form, rank, minutes, starts, goals, assists, clean sheets, bonus, xG and xA |
 | Current game state | `GET /api/game` | Current event, deadlines and game state |
 | Entry profile | `GET /api/entry/{entry}/public` | Entry name, manager and league references |
 | League and standings | `GET /api/league/{league}/details` | League settings, entries, standings and waiver information |
@@ -59,6 +59,10 @@ Write payloads and CSRF/session behaviour can change. Only use the normal signed
 
 - Join player IDs from `element-status`, picks and transactions to `bootstrap-static.elements.id`.
 - Join team IDs to `bootstrap-static.teams.id`.
+- Use `teams.name` for the full club name and combine `elements.first_name` with `elements.second_name` for the full player name.
+- Build each player's next three fixtures from the future `bootstrap-static.fixtures` map, retaining opponent and home or away status.
+- Enrich current squad picks with the joined player record and current-gameweek live element data.
+- Join current fixtures to club names and expose scores with `scheduled`, `live`, `provisional` or `finished` status; retain `/api/pl/event-status` for gameweek processing state.
 - Join `owner` to league entry IDs to reconstruct rival squads.
 - A recommendation pool contains only `status == "a"`; display locked players separately.
 - Use transactions to understand recent claims, drops and rival intent.

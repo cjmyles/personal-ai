@@ -20,7 +20,7 @@ Confirm these values from live data when possible because league membership and 
 ## Start With Live Data
 
 1. Use the signed-in in-app browser when the task needs Craig's current team, pending waivers, trade inbox or another authenticated view.
-2. Use `scripts/fpl_draft_snapshot.py` for repeatable public league data. It retrieves only allowlisted `GET` endpoints and never authenticates or mutates the team.
+2. Use `scripts/fpl_draft_snapshot.py` for repeatable public league data. It retrieves allowlisted `GET` endpoints concurrently and includes enriched squads, season statistics, next-three fixtures, live scores and match status; it never authenticates or mutates the team.
 3. Read `references/api.md` before inspecting the website or calling Draft endpoints directly.
 4. Treat the live Draft site as authoritative for ownership, deadlines, accepted transactions and league rules.
 5. Use current, authoritative football reporting for injury progress, training returns, suspensions and likely minutes when the Draft feed is unclear or stale. Separate reported facts from inference.
@@ -30,6 +30,8 @@ Example snapshot command:
 ```bash
 python3 scripts/fpl_draft_snapshot.py --entry-id 184598 --league-id 35686 --pretty
 ```
+
+Use `--timeout` to change the per-request timeout and `--max-workers` to bound concurrent requests (default `16`).
 
 To spot improving injury signals, save snapshots and compare the newest one with the previous file:
 
