@@ -78,7 +78,17 @@ Do not equate medical clearance with immediate fantasy value. Assess match fitne
 
 ## Output
 
-Lead with the decision. For each proposed waiver, state:
+Lead with the decision. Identify every player with their current full club name and position. Do not rely on a badge, shirt image, abbreviation or earlier context to convey the club.
+
+For a standard weekly review, present three compact tables before suggesting any paired moves:
+
+1. `Craig's squad`: Player, Club, Position, recent form and minutes, next three fixtures with `(H)` or `(A)`, fitness or role, and `Hold`, `Monitor`, `Open to swap` or `Priority problem`.
+2. `Available players`: Only genuinely obtainable players, with the same club, position, form, minutes and next-three-fixture fields, plus role risk and `Claim soon`, `Watch`, `Free-agency option` or `Avoid`.
+3. `Injury-return radar`: Player, Club, Position, injury, expected return, individual/partial/full training or match involvement, evidence date and source, first-start outlook, and action timing.
+
+Use full club names in the `Club` column. Opponent abbreviations are acceptable in the fixture column when each fixture still shows home or away. State the form window and data timestamp. Where the latest gameweek is unfinished, identify the affected players and treat their form as provisional.
+
+Keep player assessment separate from replacement selection. Do not force player-in/player-out pairings in the initial review unless the user asks for moves or has identified expendable players. When paired waivers are requested, state:
 
 1. `In`: Obtainable player.
 2. `Out`: Craig's player to release.
