@@ -92,7 +92,7 @@ Do not equate medical clearance with immediate fantasy value. Assess match fitne
 
 ## Output
 
-Lead with the decision. Identify every player with their current full club name and position. Do not rely on a badge, shirt image, abbreviation or earlier context to convey the club.
+Lead with the decision. In player tables, use the player's commonly recognised surname, the official three-letter club abbreviation and Draft position (`GKP`, `DEF`, `MID` or `FWD`) as separate columns. For compound surnames such as `De Cuyper`, retain the complete surname. Spell out a club name in prose only when an abbreviation could be ambiguous.
 
 For a standard weekly review, present three compact tables before suggesting any paired moves. Add `New signings and registrations` as the first table only during the transfer-window monitoring period or when a material new player is detected:
 
@@ -101,7 +101,7 @@ For a standard weekly review, present three compact tables before suggesting any
 2. `Available players`: Only genuinely obtainable players, with the same club, position, form, minutes and next-three-fixture fields, plus role risk and `Claim soon`, `Watch`, `Free-agency option` or `Avoid`.
 3. `Injury-return radar`: Player, Club, Position, injury, expected return, individual/partial/full training or match involvement, evidence date and source, first-start outlook, and action timing.
 
-Use full club names in the `Club` column. Opponent abbreviations are acceptable in the fixture column when each fixture still shows home or away. State the form window and data timestamp. Where the latest gameweek is unfinished, identify the affected players and treat their form as provisional.
+Use the same compact `Player | Club | Pos` convention in every squad, availability, new-signing, injury and waiver table. Opponent abbreviations are acceptable in the fixture column when each fixture still shows home or away. State the form window and data timestamp. Where the latest gameweek is unfinished, identify the affected players and treat their form as provisional.
 
 Keep player assessment separate from replacement selection. Do not force player-in/player-out pairings in the initial review unless the user asks for moves or has identified expendable players. When paired waivers are requested, state:
 
