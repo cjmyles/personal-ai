@@ -101,6 +101,26 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(player["next_three_fixtures"][0]["venue"], "H")
         self.assertEqual(player["next_three_fixtures"][1]["venue"], "A")
 
+    def test_registration_changes_prioritise_new_high_ranked_players(self):
+        players = [
+            {"id": 628, "name": "Bradley Barcola", "team": "Liverpool", "position": "MID", "draft_rank": 8},
+            {"id": 10, "name": "Existing Player", "team": "New Club", "position": "FWD", "draft_rank": 50},
+            {"id": 629, "name": "Lower Ranked Signing", "team": "Another Club", "position": "MID", "draft_rank": 200},
+        ]
+        previous = {
+            "10": {"id": 10, "name": "Existing Player", "team": "Old Club", "position": "FWD"}
+        }
+
+        new_players, changed_players = snapshot.registration_changes(players, previous, True)
+
+        self.assertEqual([player["id"] for player in new_players], [628, 629])
+        self.assertEqual(changed_players[0]["player"]["id"], 10)
+        self.assertEqual(
+            changed_players[0]["changes"]["team"],
+            {"from": "Old Club", "to": "New Club"},
+        )
+        self.assertEqual(snapshot.registration_changes(players, previous, False), ([], []))
+
     def test_fixture_and_squad_enrichment_include_live_state(self):
         fixture = snapshot.enrich_fixture(
             {"id": 9, "team_h": 1, "team_a": 2, "team_h_score": 2, "team_a_score": 1, "started": True, "minutes": 63},
@@ -154,6 +174,7 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(result["match_status"]["status"][0]["event"], 2)
         self.assertEqual(result["current_squad"]["picks"][0]["player"]["name"], "Ada Striker")
         self.assertIn("live_scores", result)
+        self.assertEqual(result["new_players_since_previous"], [])
 
 
 if __name__ == "__main__":

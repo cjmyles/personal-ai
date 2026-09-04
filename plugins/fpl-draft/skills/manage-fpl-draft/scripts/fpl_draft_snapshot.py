@@ -128,6 +128,35 @@ def load_previous(path: str | None) -> dict[str, dict[str, Any]]:
     }
 
 
+def registration_changes(
+    players: list[dict[str, Any]],
+    previous: dict[str, dict[str, Any]],
+    comparison_enabled: bool,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Find newly registered players and material club/position changes."""
+    if not comparison_enabled:
+        return [], []
+    new_players: list[dict[str, Any]] = []
+    changed_players: list[dict[str, Any]] = []
+    for player in players:
+        old = previous.get(str(player["id"]))
+        if old is None:
+            new_players.append(player)
+            continue
+        changes = {
+            field: {"from": old.get(field), "to": player.get(field)}
+            for field in ("team", "position")
+            if old.get(field) != player.get(field)
+        }
+        if changes:
+            changed_players.append({"player": player, "changes": changes})
+    new_players.sort(key=lambda player: int(player.get("draft_rank") or 99999))
+    changed_players.sort(
+        key=lambda item: int(item["player"].get("draft_rank") or 99999)
+    )
+    return new_players, changed_players
+
+
 def chance(value: Any) -> int | None:
     try:
         return int(value) if value is not None else None
@@ -362,6 +391,7 @@ def build_snapshot(args: argparse.Namespace) -> dict[str, Any]:
     for player in players:
         score, signals = injury_signals(player, previous.get(str(player["id"])))
         player["return_signal_score"], player["return_signals"] = score, signals
+    new_players, changed_players = registration_changes(players, previous, bool(args.previous))
     available = [player for player in players if player.get("availability") == "available"]
     return_watch = [
         player for player in available
@@ -384,6 +414,8 @@ def build_snapshot(args: argparse.Namespace) -> dict[str, Any]:
         "current_squad": enrich_squad(payloads["squad"], players_by_id, live_players),
         "squads_by_owner": squads_by_owner, "players": players,
         "available_players": available, "injury_return_watch": return_watch,
+        "new_players_since_previous": new_players,
+        "changed_players_since_previous": changed_players,
         "transactions": payloads["transactions"], "trades": payloads["trades"],
         "fixtures": fixtures, "live_scores": fixtures, "live": payloads["live"],
         "match_status": payloads["match_status"], "game": game,

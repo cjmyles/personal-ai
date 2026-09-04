@@ -42,13 +42,25 @@ python3 scripts/fpl_draft_snapshot.py --entry-id 184598 --league-id 35686 --prev
 ## Weekly Workflow
 
 1. Establish the current gameweek, deadline, waiver processing time and whether free agency is open.
-2. Retrieve Craig's squad, every rival squad available, player ownership/status, recent transactions and current pending requests where authenticated access permits.
-3. Build the obtainable pool from players marked available. Keep locked and rival-owned players separate.
-4. Review injuries, suspensions, expected minutes, fixture quality, role, set pieces, form and medium-term upside.
-5. Read `references/injury-return-waivers.md` and produce an injury-return watchlist before ranking ordinary waiver options.
-6. Recommend claims as paired moves: player in, player out, reason, timing, fallback and suggested waiver priority.
-7. Recommend a starting XI and ordered bench after accounting for injury uncertainty and fixture timing.
-8. Recheck late news close to the relevant deadline when the user asks for a final decision.
+2. Determine whether an official Premier League transfer window is open or closed within the previous 72 hours. Only in that period, compare the newest snapshot with the preceding snapshot and review every player in `new_players_since_previous` and `changed_players_since_previous`, prioritised by Draft rank.
+3. During that same transfer-window period, check official Premier League and club transfer announcements since the preceding review. Track credible imminent arrivals separately until they appear in the Draft player pool; registration lag is not a reason to omit them. Skip this signing sweep outside the window unless the user asks or the snapshot unexpectedly contains a new high-ranked player.
+4. Retrieve Craig's squad, every rival squad available, player ownership/status, recent transactions and current pending requests where authenticated access permits.
+5. Build the obtainable pool from players marked available. Keep locked and rival-owned players separate.
+6. Review injuries, suspensions, expected minutes, fixture quality, role, set pieces, form and medium-term upside.
+7. Read `references/injury-return-waivers.md` and produce an injury-return watchlist before ranking ordinary waiver options.
+8. Recommend claims as paired moves: player in, player out, reason, timing, fallback and suggested waiver priority.
+9. Recommend a starting XI and ordered bench after accounting for injury uncertainty and fixture timing.
+10. Recheck late news close to the relevant deadline when the user asks for a final decision.
+
+## New Signing Edge
+
+Treat newly signed or newly registered players as a separate time-sensitive market only while an official Premier League transfer window is open and for 72 hours after it closes, allowing for Draft registration lag. Verify the season's official opening and closing dates rather than assuming them. Within that period, scan official transfer announcements and the Draft registration feed daily when practical; the ordinary Monday/Thursday injury cadence is insufficient. Outside it, do not run a routine signing scan. For every arrival:
+
+- Record announcement date, Draft registration status, Draft rank, position and league availability
+- Assess likely role, route to starts, recent minutes at the previous club and expected adaptation time
+- Alert immediately when a high-upside player becomes available, particularly anyone entering the top 100 Draft ranks
+- If already claimed, identify the successful manager and transaction time so the process failure is visible
+- Never wait for an injury-focused review before surfacing a significant new signing
 
 ## Waiver Decisions
 
@@ -82,8 +94,9 @@ Do not equate medical clearance with immediate fantasy value. Assess match fitne
 
 Lead with the decision. Identify every player with their current full club name and position. Do not rely on a badge, shirt image, abbreviation or earlier context to convey the club.
 
-For a standard weekly review, present three compact tables before suggesting any paired moves:
+For a standard weekly review, present three compact tables before suggesting any paired moves. Add `New signings and registrations` as the first table only during the transfer-window monitoring period or when a material new player is detected:
 
+- Conditional `New signings and registrations`: Every relevant arrival or newly registered player since the preceding review, including players not yet obtainable, with club, position, Draft rank, registration/ownership state, likely role and action timing.
 1. `Craig's squad`: Player, Club, Position, recent form and minutes, next three fixtures with `(H)` or `(A)`, fitness or role, and `Hold`, `Monitor`, `Open to swap` or `Priority problem`.
 2. `Available players`: Only genuinely obtainable players, with the same club, position, form, minutes and next-three-fixture fields, plus role risk and `Claim soon`, `Watch`, `Free-agency option` or `Avoid`.
 3. `Injury-return radar`: Player, Club, Position, injury, expected return, individual/partial/full training or match involvement, evidence date and source, first-start outlook, and action timing.

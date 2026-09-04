@@ -67,3 +67,4 @@ Write payloads and CSRF/session behaviour can change. Only use the normal signed
 - A recommendation pool contains only `status == "a"`; display locked players separately.
 - Use transactions to understand recent claims, drops and rival intent.
 - Use repeated snapshots to identify improving injury and availability signals.
+- With `--previous`, review `new_players_since_previous` and `changed_players_since_previous` before ordinary waiver targets. New players are sorted by Draft rank so elite registrations are surfaced first.
