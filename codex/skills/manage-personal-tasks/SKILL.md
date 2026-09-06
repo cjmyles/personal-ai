@@ -50,8 +50,9 @@ Do not create a new label when an existing one describes the task adequately.
 1. Read the live board before answering a status or prioritisation question.
 2. Search current and completed cards before creating a card to avoid duplicates.
 3. Treat Trello as authoritative when it conflicts with remembered conversation context.
-4. Read the relevant card description, checklist, comments, due date, and position before changing it.
-5. Use another connected source, such as sent email, only when the user asks for verification or when verification is necessary to make the requested update accurately.
+4. Read the relevant card description, comments, due date, and position before changing it.
+5. Always call the dedicated Trello checklist reader when inspecting a card. Treat that response as authoritative for checklists; never conclude that a card has no checklist merely because the general card response contains an empty checklist field.
+6. Use another connected source, such as sent email, only when the user asks for verification or when verification is necessary to make the requested update accurately.
 
 ## Decide What Is Next
 
