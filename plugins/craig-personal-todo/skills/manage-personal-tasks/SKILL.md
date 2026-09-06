@@ -79,10 +79,11 @@ Keep `Today / Now` deliberately small. Do not move a large batch there merely be
 
 ## Preserve Update History
 
-- Record progress, correspondence, quotes, decisions, blockers, and completion updates as new comments by default. Trello's comment timestamp records when the update was posted; include the actual event date in the comment when it differs, and do not invent an unknown date.
-- Keep the description and checklist as the current task brief and next actions. When materially changing existing content, also add a concise comment explaining what changed and why, preserving any superseded facts needed to understand the decision.
-- Do not overwrite or delete earlier updates to make room for new ones. A generic card activity timestamp is not a substitute for a dated update.
-- If the connected tools cannot add comments, append an entry under an `Update history` heading in the description, labelled `YYYY-MM-DD HH:mm (timezone)`, using the verified current time and Craig's timezone. Preserve the existing description and previous entries. Use UTC explicitly if his timezone cannot be resolved, and report that the update was recorded in the description.
+- Keep the card description as the current task brief and next actions, followed by an `Update history` section.
+- For every progress update, correspondence, quote, decision, blocker, hand-off, or completion, append a new entry to `Update history` in the description. Label it `YYYY-MM-DD HH:mm TZ`, using the verified current time in Craig's timezone. Use `UTC` explicitly if his timezone cannot be resolved.
+- If the event happened at a different known time, record that event time instead. Do not invent an unknown time.
+- Preserve all existing description content and earlier history entries. Do not overwrite or delete old updates. When changing the current task brief or next actions, add a history entry explaining the material change.
+- Use a Trello comment instead only when the connected Trello tools support comments and Craig specifically requests one.
 - Apply this to future updates. Do not backfill or rewrite existing card history unless Craig asks.
 
 ## Track Responsibility and Status
