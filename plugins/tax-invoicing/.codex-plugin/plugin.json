@@ -1,0 +1,30 @@
+{
+  "name": "tax-invoicing",
+  "version": "0.1.0",
+  "description": "Tax receipt bookkeeping and invoice reconciliation workflows.",
+  "author": {
+    "name": "Craig Myles"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Tax & Invoicing",
+    "shortDescription": "Manage tax records, invoices and payments.",
+    "longDescription": "Two complementary workflows for tax receipts and evidence, invoice reconciliation, payments and financial-year reporting. Uses connected services and preserves review and authorisation boundaries.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Tax records",
+      "Invoice reconciliation"
+    ],
+    "defaultPrompt": [
+      "Use $tax-ledger to run a read-only review of my tax receipts.",
+      "Use $invoice-ledger to reconcile my invoices and payments without changing anything."
+    ]
+  },
+  "keywords": [
+    "tax",
+    "invoices",
+    "bookkeeping",
+    "receipts"
+  ]
+}

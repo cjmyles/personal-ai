@@ -13,3 +13,5 @@ Run `./codex/scripts/validate.sh`, then `./codex/scripts/install.sh`.
 The installer backs up an existing skill with the same generic name before replacing it. Legacy `craig-*` skills remain installed until removed deliberately.
 
 The `fpl-draft` plugin is the canonical home of the `manage-fpl-draft` skill. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
+
+The `tax-invoicing` plugin is the canonical home of `tax-ledger` and `invoice-ledger`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.

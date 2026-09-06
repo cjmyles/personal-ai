@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invoice Ledger"
+  short_description: "Reconcile invoices, payments and annual ledgers"
+  default_prompt: "Use $invoice-ledger to reconcile invoices and payments against the configured financial-year workbook."
