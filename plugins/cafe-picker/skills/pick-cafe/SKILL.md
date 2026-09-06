@@ -1,17 +1,21 @@
 ---
 name: pick-cafe
-description: "Pick, add, or update cafes for Craig using the lightweight Thao Dien Cafes Notion database. Use when Craig asks where to work from, wants a cafe suggestion, adds a cafe, or updates cafe notes."
+description: "Pick, add, or update cafes for Craig using the Thao Dien Cafes Google Sheet. Use when Craig asks where to work from, wants a cafe suggestion, adds a cafe, or updates cafe notes."
 ---
 
 # Pick Cafe
 
-Use Craig's Notion cafe database as the decision layer and Google Maps links as the map layer.
+Use Craig's Google Sheet as the decision layer and Google Maps links as the map layer.
 
 ## Data source
 
-- Database: `Thao Dien Cafes`
-- Database URL: `https://app.notion.com/p/490adfa3dc6a476ebe402a35d18133dd`
-- Data source URL: `collection://bbf365ec-b28e-4e18-bc68-aa858b2b4747`
+- Spreadsheet: `Thao Dien Cafes`
+- Spreadsheet URL: `https://docs.google.com/spreadsheets/d/11pvsRLbW5keYkEP7crOiSuxLjOX3ZZ9zz-ge4e2C3LI/edit`
+- Spreadsheet ID: `11pvsRLbW5keYkEP7crOiSuxLjOX3ZZ9zz-ge4e2C3LI`
+- Sheet: `Cafes`
+- Native table: `CafesTable`
+
+This Google Sheet is the only cafe data source. Ignore any legacy cafe data source or link.
 
 ## Schema
 
@@ -22,9 +26,10 @@ Use only this lightweight first-version schema unless Craig asks to expand it:
 - `Type`: `Laptop cafe`, `Local cafe`, `Brunch cafe`, or `Evening cafe`.
 - `Area`: `Thao Dien`, `An Phu`, `District 2 nearby`, or `Other`.
 - `Vibe tags`: Any of `Quiet`, `Comfortable`, `Pretty`, `Good coffee`, `Good food`, `Cheap`, `Reliable`.
-- `Google Maps link`: Link for location and directions.
+- `Has games`: Checkbox for cafes known to have games.
 - `Last visited`: Optional date.
 - `Notes`: Short free-text notes.
+- `Google Maps link`: Link for location and directions.
 
 Do not require Craig to maintain detailed attributes like power sockets, Wi-Fi, table size, aircon, or seat comfort. If he gives that information naturally, capture it briefly in `Notes`; only add structured fields later if he asks.
 
@@ -32,7 +37,7 @@ Do not require Craig to maintain detailed attributes like power sockets, Wi-Fi, 
 
 When Craig asks for a cafe recommendation:
 
-1. Query the Notion database for usable cafes, excluding `Avoid` unless he explicitly asks.
+1. Read the `Cafes` table from the Google Sheet and exclude `Avoid` unless he explicitly asks.
 2. Prefer one clear recommendation and one backup, not a long shortlist.
 3. Match the current need:
    - Laptop work: prioritise `Laptop cafe`, `Quiet`, `Comfortable`, and `Reliable`.
@@ -58,6 +63,7 @@ When Craig provides a cafe name, link, or feedback:
 - Add new cafes with the minimum useful fields.
 - Update existing cafes rather than creating duplicates.
 - Use `Notes` for informal observations.
+- Preserve the native table, dropdowns, checkbox, date formatting, and existing row styling when adding or updating records.
 - Ask a clarifying question only if the missing field would materially change the record.
 
 ## Recommendation sourcing
@@ -69,4 +75,3 @@ For new cafe discovery, use current sources when available:
 - Craig's own saved Google Maps lists when he exports or provides them.
 
 Separate sourced facts from inference. Do not invent opening hours, laptop suitability, or amenities without evidence.
-

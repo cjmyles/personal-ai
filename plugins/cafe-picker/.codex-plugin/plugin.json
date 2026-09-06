@@ -1,7 +1,7 @@
 {
   "name": "cafe-picker",
-  "version": "0.1.0+codex.20260905034612",
-  "description": "Craig's lightweight Thao Dien cafe picker using a Notion cafe database.",
+  "version": "0.1.0+codex.20260906070708",
+  "description": "Craig's lightweight Thao Dien cafe picker using a Google Sheet.",
   "author": {
     "name": "Craig Myles",
     "url": "https://github.com/cjmyles"
@@ -11,19 +11,19 @@
   "keywords": [
     "cafes",
     "thao-dien",
-    "notion",
+    "google-sheets",
     "decision-support"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Cafe Picker",
     "shortDescription": "Pick a Thao Dien cafe quickly.",
-    "longDescription": "Choose a suitable Thao Dien cafe for laptop work, relaxed local visits, brunch or low-decision-energy outings using Craig's Notion cafe database.",
+    "longDescription": "Choose a suitable Thao Dien cafe for laptop work, relaxed local visits, brunch or low-decision-energy outings using Craig's Google Sheet.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [
       "Decision support",
-      "Notion"
+      "Google Sheets"
     ],
     "defaultPrompt": [
       "Use $pick-cafe to pick me a cafe near Thao Dien for laptop work.",
