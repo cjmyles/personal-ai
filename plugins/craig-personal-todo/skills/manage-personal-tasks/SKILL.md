@@ -77,6 +77,14 @@ Keep `Today / Now` deliberately small. Do not move a large batch there merely be
 - Preserve useful existing context when updating a card.
 - Avoid storing unnecessary sensitive health, financial, tax, insurance, estate, or identity details in Trello.
 
+## Preserve Update History
+
+- Record progress, correspondence, quotes, decisions, blockers, and completion updates as new comments by default. Trello's comment timestamp records when the update was posted; include the actual event date in the comment when it differs, and do not invent an unknown date.
+- Keep the description and checklist as the current task brief and next actions. When materially changing existing content, also add a concise comment explaining what changed and why, preserving any superseded facts needed to understand the decision.
+- Do not overwrite or delete earlier updates to make room for new ones. A generic card activity timestamp is not a substitute for a dated update.
+- If the connected tools cannot add comments, append an entry under an `Update history` heading in the description, labelled `YYYY-MM-DD HH:mm (timezone)`, using the verified current time and Craig's timezone. Preserve the existing description and previous entries. Use UTC explicitly if his timezone cannot be resolved, and report that the update was recorded in the description.
+- Apply this to future updates. Do not backfill or rewrite existing card history unless Craig asks.
+
 ## Track Responsibility and Status
 
 For tasks Craig can act on, keep the card in an active list that reflects its priority.
