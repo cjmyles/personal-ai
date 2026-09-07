@@ -1,4 +1,5 @@
 import argparse
+import datetime as dt
 import importlib.util
 import unittest
 from pathlib import Path
@@ -120,6 +121,35 @@ class SnapshotTests(unittest.TestCase):
             {"from": "Old Club", "to": "New Club"},
         )
         self.assertEqual(snapshot.registration_changes(players, previous, False), ([], []))
+
+    def test_expected_return_date_falls_back_to_draft_news(self):
+        parsed = snapshot.expected_return_date(
+            None,
+            "Calf injury - Expected back 5 Sep",
+            dt.datetime(2026, 9, 4, tzinfo=dt.timezone.utc),
+        )
+
+        self.assertEqual(parsed.date().isoformat(), "2026-09-05")
+
+    def test_available_zero_minute_injury_return_is_surfaced(self):
+        player = {
+            "id": 400, "name": "Jérémy Doku", "availability": "available",
+            "status": "i", "news": "Calf injury - Expected back 5 Sep",
+            "news_return": "2026-09-05", "minutes": 0, "points": 0,
+            "draft_rank": 25, "chance_next": 0, "chance_this": 0,
+        }
+
+        score, signals = snapshot.injury_signals(
+            player, None, dt.datetime(2026, 9, 4, tzinfo=dt.timezone.utc)
+        )
+        return_watch = [
+            candidate for candidate in [player]
+            if score > 0 or candidate.get("status") in {"i", "d", "u", "s"}
+        ]
+
+        self.assertGreater(score, 0)
+        self.assertIn("listed return is within three weeks", signals)
+        self.assertEqual([candidate["id"] for candidate in return_watch], [400])
 
     def test_fixture_and_squad_enrichment_include_live_state(self):
         fixture = snapshot.enrich_fixture(

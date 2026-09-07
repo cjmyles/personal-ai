@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -19,6 +20,9 @@ DEFAULT_LEAGUE_ID = 35686
 DEFAULT_TIMEOUT = 20.0
 DEFAULT_MAX_WORKERS = 16
 STATUS_LABELS = {"a": "available", "o": "owned", "l": "locked"}
+EXPECTED_BACK_RE = re.compile(
+    r"\bexpected\s+back\s+(\d{1,2})\s+([A-Za-z]{3,9})\b", re.IGNORECASE
+)
 
 
 def fetch_json(path: str, timeout: float = DEFAULT_TIMEOUT) -> Any:
@@ -115,6 +119,32 @@ def parse_date(value: Any) -> dt.datetime | None:
             return None
 
 
+def expected_return_date(
+    value: Any,
+    news: Any,
+    reference: dt.datetime | None = None,
+) -> dt.datetime | None:
+    """Use the structured return date, falling back to Draft's news wording."""
+    structured = parse_date(value)
+    if structured:
+        return structured
+    if not isinstance(news, str):
+        return None
+    match = EXPECTED_BACK_RE.search(news)
+    if not match:
+        return None
+    now = reference or dt.datetime.now(dt.timezone.utc)
+    try:
+        parsed = dt.datetime.strptime(
+            f"{match.group(1)} {match.group(2)[:3]} {now.year}", "%d %b %Y"
+        ).replace(tzinfo=dt.timezone.utc)
+    except ValueError:
+        return None
+    if parsed < now - dt.timedelta(days=31):
+        parsed = parsed.replace(year=parsed.year + 1)
+    return parsed
+
+
 def load_previous(path: str | None) -> dict[str, dict[str, Any]]:
     if not path:
         return {}
@@ -164,15 +194,20 @@ def chance(value: Any) -> int | None:
         return None
 
 
-def injury_signals(player: dict[str, Any], previous: dict[str, Any] | None) -> tuple[int, list[str]]:
+def injury_signals(
+    player: dict[str, Any],
+    previous: dict[str, Any] | None,
+    reference: dt.datetime | None = None,
+) -> tuple[int, list[str]]:
     score = 0
     signals: list[str] = []
     status = player.get("status")
     next_chance = chance(player.get("chance_next"))
     this_chance = chance(player.get("chance_this"))
-    return_date = parse_date(player.get("news_return"))
+    now = reference or dt.datetime.now(dt.timezone.utc)
+    return_date = expected_return_date(player.get("news_return"), player.get("news"), now)
     if return_date:
-        days = (return_date - dt.datetime.now(dt.timezone.utc)).days
+        days = (return_date - now).days
         if -7 <= days <= 21:
             score += 3
             signals.append("listed return is within three weeks")
@@ -284,6 +319,7 @@ def normalise_player(
         if part.strip()
     )
     availability_code = availability.get("status")
+    return_date = expected_return_date(element.get("news_return"), element.get("news"))
     return {
         "id": element_id, "name": full_name or element.get("web_name") or str(element_id),
         "web_name": element.get("web_name"), "team": team_names.get(team_id, team_id),
@@ -296,7 +332,8 @@ def normalise_player(
         "chance_this": element.get("chance_of_playing_this_round"),
         "chance_next": element.get("chance_of_playing_next_round"),
         "news": element.get("news"), "news_added": element.get("news_added"),
-        "news_updated": element.get("news_updated"), "news_return": element.get("news_return"),
+        "news_updated": element.get("news_updated"),
+        "news_return": return_date.date().isoformat() if return_date else None,
         "form": element.get("form"), "points": element.get("total_points"),
         "draft_rank": element.get("draft_rank"), "minutes": element.get("minutes"),
         "starts": element.get("starts"), "goals": element.get("goals_scored"),
