@@ -1,0 +1,36 @@
+{
+  "name": "craig-email",
+  "version": "0.1.0",
+  "description": "Craig's preferred email voice, formatting and safe sending workflow.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": [
+    "email",
+    "gmail",
+    "writing",
+    "communication"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Craig Email",
+    "shortDescription": "Write and send email in Craig's style.",
+    "longDescription": "Draft, review, reply to, forward and send email using Craig's preferred voice, Trebuchet MS formatting, sign-off and explicit sending boundaries.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Email writing",
+      "Email formatting",
+      "Safe sending"
+    ],
+    "defaultPrompt": [
+      "Use $write-craig-email to draft a concise email in my preferred style.",
+      "Use $write-craig-email to reply to this email in my preferred style.",
+      "Use $write-craig-email to review this draft and send it only after I explicitly approve it."
+    ],
+    "brandColor": "#2563EB"
+  }
+}
