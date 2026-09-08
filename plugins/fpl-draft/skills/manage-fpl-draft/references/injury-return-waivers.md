@@ -12,6 +12,8 @@ Rank signals by reliability:
 
 Record the source date. A more recent lower-quality report does not automatically outweigh direct club evidence.
 
+Do not build this list from an ordinary form or points shortlist. Start from the complete league-available pool and inspect every player whose Draft status or news indicates injury, doubt, suspension, rehabilitation or an expected return. This includes zero-minute and zero-point players.
+
 ## Return Stages
 
 Use these practical stages:
@@ -66,3 +68,12 @@ For each possible stash, compare:
 - Evidence freshness and confidence
 
 The final recommendation should identify the trigger that would change the decision, such as full training, inclusion on the bench or a manager confirming readiness to start.
+
+## Completeness Check
+
+Before publishing a review:
+
+1. Create the set of every obtainable player with status `i`, `d`, `u` or `s`, or with injury/return wording in the Draft news.
+2. Compare that set with the injury-return radar.
+3. Include each matched player or state a specific exclusion reason based on role, expected absence, recurrence risk or drop cost.
+4. Only then rank ordinary available players by form, points, minutes or fixtures.

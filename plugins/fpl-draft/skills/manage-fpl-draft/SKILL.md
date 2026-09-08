@@ -48,6 +48,7 @@ python3 scripts/fpl_draft_snapshot.py --entry-id 184598 --league-id 35686 --prev
 5. Build the obtainable pool from players marked available. Keep locked and rival-owned players separate.
 6. Review injuries, suspensions, expected minutes, fixture quality, role, set pieces, form and medium-term upside.
 7. Read `references/injury-return-waivers.md` and produce an injury-return watchlist before ranking ordinary waiver options.
+   Review every obtainable player carrying an injury or doubt flag, including players with zero points or minutes. Do not let a form-, points- or minutes-based shortlist determine who enters the injury-return review.
 8. Recommend claims as paired moves: player in, player out, reason, timing, fallback and suggested waiver priority.
 9. Recommend a starting XI and ordered bench after accounting for injury uncertainty and fixture timing.
 10. Recheck late news close to the relevant deadline when the user asks for a final decision.
@@ -87,6 +88,8 @@ The main edge is often claiming a valuable player before the Draft market fully 
 - Manager comments that clarify rehabilitation or expected minutes
 - A substitute appearance followed by a plausible route to starts
 - A favourable fixture run beginning near the expected return
+
+Before finalising a review, cross-check the complete obtainable pool against the injury-return watchlist. Every obtainable player with an injury, doubtful, unavailable or suspended status, explicit expected-return date, or credible recent rehabilitation report must either appear in the radar or have an explicit reason for exclusion. Zero current points, zero minutes and poor form are not exclusion reasons for a returning player.
 
 Do not equate medical clearance with immediate fantasy value. Assess match fitness, competition for places, managed minutes, recurrence risk and whether the player still has the same role. Label speculative stashes clearly.
 
