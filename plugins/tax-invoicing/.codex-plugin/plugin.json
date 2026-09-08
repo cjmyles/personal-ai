@@ -1,7 +1,7 @@
 {
   "name": "tax-invoicing",
-  "version": "0.1.0+codex.20260908074910",
-  "description": "Tax receipt bookkeeping and invoice reconciliation workflows.",
+  "version": "0.1.0+codex.20260908092424",
+  "description": "Tax bookkeeping, card-statement and invoice reconciliation workflows.",
   "author": {
     "name": "Craig Myles"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Tax & Invoicing",
     "shortDescription": "Manage tax records, invoices and payments.",
-    "longDescription": "Two complementary workflows for tax receipts and evidence, invoice reconciliation, payments and financial-year reporting. Uses connected services and preserves review and authorisation boundaries.",
+    "longDescription": "Tax receipts and evidence, conservative card-statement matching, spending review, repayment tracking and invoice reconciliation. Uses private configuration and preserves review and authorisation boundaries.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [

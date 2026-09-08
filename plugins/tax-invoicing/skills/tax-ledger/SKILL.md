@@ -1,11 +1,17 @@
 ---
 name: tax-ledger
-description: Use when processing Australian tax receipts and invoices from Gmail into Google Drive and Google Sheets, running a dry run, checking missing FY records, preserving or retrieving evidence, applying Gmail labels, or archiving processed tax emails. Enforces duplicate checks, separate transaction and evidence statuses, personal tax-profile rules, GST review, and explicit confirmation before mailbox changes.
+description: Process Australian tax receipts, invoices and monthly bank or credit-card statements into configured Drive evidence and FY spreadsheets. Use for statement reconciliation, actual-AUD matching, missing expenses, spending review, repayment tracking, dry runs, evidence retrieval and authorised email labelling or archiving. Keeps reconciliation, evidence, tax review and repayment independent.
 ---
 
 # Tax Ledger
 
-Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, and Sheets as the operating system; do not introduce a database unless explicitly requested.
+Use this skill for a configuration-led, review-first tax-record workflow. Keep the configured mail, Drive and spreadsheet systems; do not introduce a database unless explicitly requested.
+
+## Configuration first
+
+Read [configuration.md](references/configuration.md) at the start of every run. Live `Tax Ledger Configuration` and effective FY overrides are authoritative for personal details, systems, tax treatment, suppliers, folders and policies. Bundled historical personal references are not a current source of truth and must never override live configuration. Missing or conflicting settings require review, not a guessed tax rule.
+
+For bank/card statements, statement-available notices, actual-AUD reconciliation, unusual-spending checks or card-repayment tracking, also read [statement-reconciliation.md](references/statement-reconciliation.md). Its payment/archive gate overrides the general processed-email rule below. An implementation request does not authorise bank payments or scheduling an automation.
 
 ## Required references
 
@@ -54,6 +60,7 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Apply the processed label only after evidence and ledger verification succeed.
    - Archive only after the user has reviewed the entries or explicitly instructs archiving.
    - Archive means remove Inbox; never trash the message.
+   - For statement emails, reconciliation does not prove repayment. Keep Inbox until the statement payment is confirmed, or a verified actionable payment reminder/task exists and the user explicitly approves archiving despite outstanding payment.
 8. Reconcile annual expectations when requested.
    - Compare the ledger against each applicable check in `annual-checks.md`.
    - Report expected, found, missing, duplicate, needs review, and not applicable counts separately.

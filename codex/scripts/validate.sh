@@ -30,3 +30,6 @@ for plugin in "$repo_root"/plugins/*; do
   [ -d "$plugin" ] || continue
   "$venv/bin/python3" "$plugin_validator" "$plugin"
 done
+
+PYTHONDONTWRITEBYTECODE=1 "$venv/bin/python3" -m unittest discover \
+  -s "$repo_root/plugins/tax-invoicing/skills/tax-ledger/tests" -v

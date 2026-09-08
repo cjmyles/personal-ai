@@ -1,5 +1,7 @@
 # Evidence and processing workflow
 
+Read live configuration first. For card/bank statement notifications, use `statement-reconciliation.md`; its repayment and unresolved-action checks take precedence over the general archive step. A processed statement is not necessarily paid.
+
 ## Selection
 
 Search the relevant financial-year and property labels, then expand using known suppliers and account numbers, the property address and identifiers, financial document terms, and recurring ledger suppliers.
