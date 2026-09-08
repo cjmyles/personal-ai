@@ -44,6 +44,7 @@ Use this skill for Craig's review-first tax-record workflow. Keep Gmail, Drive, 
    - Link the accountant-accessible Drive evidence from the ledger, not the private Gmail message.
 5. Extract and classify.
    - Populate the standard schema and use the supplier document as the primary source.
+   - Translate supported foreign-currency amounts into AUD using the rules in `references/schema.md`; do not require a card or bank statement solely to perform the conversion.
    - Calculate GST only when the evidence supports it. Flag uncertainty rather than guessing.
 6. Write and verify.
    - Use one transaction per row in a flat table.

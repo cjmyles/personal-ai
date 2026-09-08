@@ -1,6 +1,6 @@
 {
   "name": "tax-invoicing",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260908074910",
   "description": "Tax receipt bookkeeping and invoice reconciliation workflows.",
   "author": {
     "name": "Craig Myles"
