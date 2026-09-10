@@ -17,6 +17,16 @@ Treat Premier League Fantasy Draft as a closed player market. A strong player wh
 
 Confirm these values from live data when possible because league membership and season identifiers can change.
 
+## Persistent Player Tracker
+
+For Craig's league, read the current Library document `D-Raft-player-tracker.md` before squad, waiver, lineup or injury-return reviews, including scheduled reviews that use this skill. Its stable Library file ID is `libfile_579f567e31908191a001d1e369f3e01f`; its canonical path is `/D-Raft-player-tracker.md`. Use the Library skill to read and update it. Resolve by the stable ID, or search the exact filename if necessary; do not depend on a previous thread's scratch path or create a duplicate.
+
+Use the tracker for continuity, not as live football evidence. Refresh ownership, pending claims, deadlines and material team news. Keep dated facts and sources separate from inference, user opinions and unresolved checks. Record surname, club, Draft position, availability timestamp, rank type and value where checked, historical scoring where available, role/minutes, injury progression, current decision, possible drop, priority, risk, fallback and a concrete reassessment trigger. Mark unknown fields rather than inventing them.
+
+After a review or authorised change, update the same document, preserving its Library identity and version history. Keep actual pending claims, suggested claims and completed transactions distinct. Retain previous decisions with a dated explanation of what evidence or corrected reasoning changed the recommendation; do not silently overwrite the history. Document updates do not authorise team or watchlist changes.
+
+If the tracker is inaccessible, say so and continue the useful live review with the available context; do not claim to have read or updated it. A skill publication does not itself change a Scheduled Task's prompt or guarantee that the task loads this skill and has Library access. Report scheduled-task integration as complete only after verifying it separately.
+
 ## Start With Live Data
 
 1. Use the signed-in in-app browser when the task needs Craig's current team, pending waivers, trade inbox or another authenticated view.
@@ -84,7 +94,7 @@ A strong Draft rank and established scoring record create a presumption to hold 
 
 Compare incoming and outgoing players over the next four to six gameweeks and the rest of the season, including the risk of permanently handing the outgoing player to a rival. Recommend a drop only when the expected improvement is clear enough to justify that cost; otherwise hold and give a concrete reassessment trigger. A bench goal does not establish regular starts, and a removed injury flag does not establish match fitness or a secure role.
 
-Respect Craig's explicit hold decisions throughout the review. Do not force a midfield or forward transfer merely to fill every position.
+Treat Craig's opinions as input to an independent assessment, not as automatic player protection. Respect an explicit instruction not to release a player, while distinguishing it from a stated belief that the player will improve. Do not force a midfield or forward transfer merely to fill every position.
 
 ## Keep Recommendations Consistent
 
