@@ -76,6 +76,22 @@ Rank obtainable players by marginal value over Craig's likely drop, not by reput
 
 Prefer conditional recommendations when team news is unresolved. Give at least one fallback for an important claim. Do not recommend dropping a player without checking whether the move would leave a legal squad and whether the outgoing player is likely to be claimed immediately.
 
+## Protect Established Squad Value
+
+Before recommending a release, assess the outgoing player's official Draft rank, established season points and points per appearance, current starts and minutes, role, set pieces, defensive contributions and injury or adaptation context. Check historical totals when accessible; if unavailable, state the gap rather than inventing a track record. Identify which rank is being used: Draft rank is not current points rank or ICT rank.
+
+A strong Draft rank and established scoring record create a presumption to hold through a short poor run, especially when regular starts continue. Do not recommend releasing such a player solely because an available player has more points in the last two or three matches. Rank is evidence, not a guarantee: weigh meaningful changes in role, sustained loss of starts, injury prognosis and scoring opportunities. Account for a club change rather than assuming previous output transfers unchanged.
+
+Compare incoming and outgoing players over the next four to six gameweeks and the rest of the season, including the risk of permanently handing the outgoing player to a rival. Recommend a drop only when the expected improvement is clear enough to justify that cost; otherwise hold and give a concrete reassessment trigger. A bench goal does not establish regular starts, and a removed injury flag does not establish match fitness or a secure role.
+
+Respect Craig's explicit hold decisions throughout the review. Do not force a midfield or forward transfer merely to fill every position.
+
+## Keep Recommendations Consistent
+
+When reviewing an existing waiver list or reconciling reports, retain every original pair in the review and mark it keep, reorder, conditional or remove. Explain additions and removals before presenting the revised order; do not silently replace the list with suggestions at only one position. If Craig requests only a concise final in/out table, provide that format after reconciling the decisions.
+
+Compare with the latest recommendation when available. For a changed recommendation, identify the new evidence, changed user preference or correction to earlier reasoning. Do not present an old report as newly verified, reverse advice merely to agree with a challenge, or invent supporting news. Questions about tools or process steer the active review; answer them briefly and then finish the recommendations unless Craig cancels the task.
+
 ## Injury-Return Edge
 
 The main edge is often claiming a valuable player before the Draft market fully reacts. Look for changes, not merely an injury flag:
