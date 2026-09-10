@@ -1,6 +1,6 @@
 {
   "name": "craig-email",
-  "version": "0.1.0+codex.20260910021415",
+  "version": "0.1.0+codex.20260910022656",
   "description": "Craig's preferred email voice, formatting and safe sending workflow.",
   "author": {
     "name": "Craig Myles",
@@ -16,7 +16,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Craig Email",
+    "displayName": "Email",
     "shortDescription": "Write and send email in Craig's style.",
     "longDescription": "Draft, review, reply to, forward and send email using Craig's preferred voice, Trebuchet MS formatting, sign-off and explicit sending boundaries.",
     "developerName": "Craig Myles",

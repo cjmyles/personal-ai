@@ -3,7 +3,7 @@ name: write-craig-email
 description: Draft, review, reply to, forward, or send email on Craig's behalf using his preferred voice, formatting, sign-off, and approval boundaries. Use whenever Craig asks to write or act on an email; do not use for merely reading or summarising email.
 ---
 
-# Write Craig Email
+# Email
 
 Write natural, concise email that sounds like Craig and fits the recipient and context.
 

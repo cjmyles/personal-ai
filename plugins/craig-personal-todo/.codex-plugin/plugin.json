@@ -1,6 +1,6 @@
 {
   "name": "craig-personal-todo",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260910022656",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work.",
   "author": {
     "name": "Craig Myles",
@@ -16,7 +16,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Craig Personal Todo",
+    "displayName": "Personal Tasks",
     "shortDescription": "Manage Craig's Trello Personal Todo board.",
     "longDescription": "Read, prioritise and update Craig's personal todo system using the Trello Personal Todo board as the source of truth across desktop and mobile ChatGPT Work.",
     "developerName": "Craig Myles",

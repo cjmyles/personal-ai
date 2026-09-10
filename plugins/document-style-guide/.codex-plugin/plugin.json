@@ -1,0 +1,33 @@
+{
+  "name": "document-style-guide",
+  "version": "0.1.0",
+  "description": "Document structure, writing style and readable message formatting.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Document Style Guide",
+    "shortDescription": "Clear structure, references and readable paragraphs.",
+    "longDescription": "Apply context-first document structure, plain British English, references, appendices and minimal edits. Keep every assistant reply readable with clear paragraph spacing.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Document writing",
+      "Document editing"
+    ],
+    "defaultPrompt": [
+      "Use $document-style-guide to write this document.",
+      "Use $document-style-guide to edit this document with minimal changes."
+    ]
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": [
+    "documents",
+    "writing",
+    "style",
+    "formatting"
+  ]
+}

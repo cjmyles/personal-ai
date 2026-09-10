@@ -3,7 +3,7 @@ name: git-pr
 description: "Use when the user wants to create or update a pull request. Handles scoped or all-local PRs, fast/no-test PRs, and validated PRs. Trigger on `git-pr`, PR-ready requests, open/update PR, create a pull request, yeet this, yeet fast, yeet all, or similar requests that should publish commits and open or update a PR."
 ---
 
-# Git PR
+# Git Pull Request
 
 Use this skill when the user wants a PR opened or updated.
 

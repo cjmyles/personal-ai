@@ -1,6 +1,6 @@
 {
   "name": "cafe-picker",
-  "version": "0.1.0+codex.20260906070708",
+  "version": "0.1.0+codex.20260910022656",
   "description": "Craig's lightweight Thao Dien cafe picker using a Google Sheet.",
   "author": {
     "name": "Craig Myles",
@@ -16,7 +16,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Cafe Picker",
+    "displayName": "Caf\u00e9 Picker",
     "shortDescription": "Pick a Thao Dien cafe quickly.",
     "longDescription": "Choose a suitable Thao Dien cafe for laptop work, relaxed local visits, brunch or low-decision-energy outings using Craig's Google Sheet.",
     "developerName": "Craig Myles",

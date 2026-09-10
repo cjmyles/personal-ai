@@ -1,4 +1,4 @@
 interface:
-  display_name: "Write Craig Email"
+  display_name: "Email"
   short_description: "Draft and send email in Craig’s style"
   default_prompt: "Use $write-craig-email to draft or send an email in my preferred style."

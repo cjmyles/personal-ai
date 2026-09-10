@@ -1,4 +1,4 @@
 interface:
-  display_name: "Pick Cafe"
+  display_name: "Café Picker"
   short_description: "Choose a Thao Dien cafe quickly"
   default_prompt: "Use $pick-cafe to pick one cafe and one backup from my Thao Dien Cafes Google Sheet."

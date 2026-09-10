@@ -1,3 +1,3 @@
 interface:
-  display_name: "git-worktree"
+  display_name: "Git Worktree"
   short_description: "Manage isolated Git worktrees safely"

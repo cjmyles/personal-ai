@@ -3,7 +3,7 @@ name: manage-fpl-draft
 description: "Manage Craig's Premier League Fantasy Draft team with league-aware weekly analysis. Use for FPL Draft squad reviews, starting XI and bench order, waiver and free-agent recommendations, injury-return watchlists, player availability, rival squads, fixtures, transactions, trades, and waiver planning. This is Draft, not budget-based Fantasy Premier League: players are exclusive to one manager and recommendations must be based on who is actually obtainable in the league."
 ---
 
-# Manage FPL Draft
+# FPL Draft
 
 Treat Premier League Fantasy Draft as a closed player market. A strong player who is owned by a rival is not a waiver recommendation. Prices, budgets, captaincy and ordinary FPL transfer logic do not apply.
 
