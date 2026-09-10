@@ -1,6 +1,6 @@
 {
   "name": "craig-personal-todo",
-  "version": "0.1.0+codex.20260910022656",
+  "version": "0.1.0+codex.20260910023657",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work.",
   "author": {
     "name": "Craig Myles",
@@ -30,6 +30,8 @@
       "Use $manage-personal-tasks to add, update, move or complete a personal todo card.",
       "Use $manage-personal-tasks to review my Today / Now, This Week and Waiting tasks."
     ],
-    "brandColor": "#0079BF"
+    "brandColor": "#0079BF",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }

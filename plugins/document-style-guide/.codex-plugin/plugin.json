@@ -1,6 +1,6 @@
 {
   "name": "document-style-guide",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260910023657",
   "description": "Document structure, writing style and readable message formatting.",
   "author": {
     "name": "Craig Myles",
@@ -20,7 +20,9 @@
     "defaultPrompt": [
       "Use $document-style-guide to write this document.",
       "Use $document-style-guide to edit this document with minimal changes."
-    ]
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   },
   "homepage": "https://github.com/cjmyles/personal-ai",
   "repository": "https://github.com/cjmyles/personal-ai",

@@ -1,6 +1,6 @@
 {
   "name": "craig-email",
-  "version": "0.1.0+codex.20260910022656",
+  "version": "0.1.0+codex.20260910023657",
   "description": "Craig's preferred email voice, formatting and safe sending workflow.",
   "author": {
     "name": "Craig Myles",
@@ -31,6 +31,8 @@
       "Use $write-craig-email to reply to this email in my preferred style.",
       "Use $write-craig-email to review this draft and send it only after I explicitly approve it."
     ],
-    "brandColor": "#2563EB"
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }

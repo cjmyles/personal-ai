@@ -2,7 +2,7 @@ interface:
   display_name: "Document Style Guide"
   short_description: "Readable documents with context, evidence and clear structure"
   default_prompt: "Use $document-style-guide to write or edit this document with clear context, a useful summary and appropriate supporting references."
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
 policy:
   allow_implicit_invocation: true

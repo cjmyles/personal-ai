@@ -1,6 +1,6 @@
 {
   "name": "tax-invoicing",
-  "version": "0.1.0+codex.20260908092424",
+  "version": "0.1.0+codex.20260910023657",
   "description": "Tax bookkeeping, card-statement and invoice reconciliation workflows.",
   "author": {
     "name": "Craig Myles"
@@ -19,7 +19,9 @@
     "defaultPrompt": [
       "Use $tax-ledger to run a read-only review of my tax receipts.",
       "Use $invoice-ledger to reconcile my invoices and payments without changing anything."
-    ]
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   },
   "keywords": [
     "tax",
