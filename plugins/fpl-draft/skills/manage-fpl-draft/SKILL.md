@@ -77,6 +77,8 @@ Rank obtainable players by marginal value over Craig's likely drop, not by reput
 
 Prefer conditional recommendations when team news is unresolved. Give at least one fallback for an important claim. Do not recommend dropping a player without checking whether the move would leave a legal squad and whether the outgoing player is likely to be claimed immediately.
 
+Treat squad building and weekly lineup selection as different decisions. Preserve a core of proven, highly ranked players through short injuries, temporary poor form and isolated difficult fixtures unless the replacement offers clearly greater medium- or long-term value. Assess established track record, Draft rank, historical points and points per start alongside recent form; a small sample may change confidence but should not erase sustained value by itself. Use waivers mainly for genuine role changes, significant injuries, emerging starters, high-upside breakouts and favourable multi-week fixture runs. Reserve the weaker end of the squad, particularly replaceable defenders and goalkeepers, for more active rotation. Optimise the current Gameweek primarily through the starting XI and bench order rather than repeatedly surrendering valuable players for one-week fixtures.
+
 ## Injury-Return Edge
 
 The main edge is often claiming a valuable player before the Draft market fully reacts. Look for changes, not merely an injury flag:
