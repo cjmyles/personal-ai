@@ -54,6 +54,25 @@ class StatementGuardsTest(unittest.TestCase):
                                         self.ledger, self.policy)[0])
         self.assertFalse(match_gate(self.statement, self.ledger, {})[0])
 
+    def test_single_date_statement_requires_explicit_source_check(self):
+        s = dict(self.statement, posting_date=None)
+        self.assertFalse(match_gate(s, self.ledger, self.policy)[0])
+        s["posting_date_not_supplied"] = True
+        self.assertTrue(match_gate(s, self.ledger, self.policy)[0])
+        s["posting_date"] = "invalid"
+        self.assertFalse(match_gate(s, self.ledger, self.policy)[0])
+
+    def test_supported_date_difference_within_window(self):
+        s = dict(self.statement, transaction_date="2026-06-29",
+                 date_compatibility_verified=True,
+                 date_compatibility_reason="Unique invoice and original amount; adjacent source dates checked.")
+        self.assertTrue(match_gate(s, self.ledger, self.policy)[0])
+        for changes in ({"date_compatibility_verified": False},
+                        {"date_compatibility_reason": ""},
+                        {"transaction_date": "2026-06-01"},
+                        {"unique_candidate": False}, {"original_amount": 99}):
+            self.assertFalse(match_gate(dict(s, **changes), self.ledger, self.policy)[0])
+
     def test_refunds_split_payments_and_lodged_returns_need_review(self):
         for kind in ["refund", "repayment", "split", "fee"]:
             self.assertFalse(match_gate(dict(self.statement, kind=kind),

@@ -34,11 +34,20 @@ def match_gate(statement, ledger, policy):
         if not all(x.is_finite() and x > 0 for x in (actual, estimate, original)):
             return False, "invalid_amount"
         transaction_date = date.fromisoformat(statement["transaction_date"])
-        if transaction_date != date.fromisoformat(ledger["payment_date"]):
-            return False, "transaction_date_mismatch"
-        posting_date = date.fromisoformat(statement["posting_date"])
-        if not 0 <= (posting_date - transaction_date).days <= lag:
-            return False, "posting_date_outside_window"
+        payment_date = date.fromisoformat(ledger["payment_date"])
+        if abs((transaction_date - payment_date).days) > lag:
+            return False, "transaction_date_outside_window"
+        if transaction_date != payment_date and (
+                statement.get("date_compatibility_verified") is not True
+                or not str(statement.get("date_compatibility_reason") or "").strip()):
+            return False, "date_difference_unexplained"
+        # A single-date statement is valid evidence. Never invent a posting date.
+        if statement.get("posting_date") not in (None, ""):
+            posting_date = date.fromisoformat(statement["posting_date"])
+            if not 0 <= (posting_date - transaction_date).days <= lag:
+                return False, "posting_date_outside_window"
+        elif statement.get("posting_date_not_supplied") is not True:
+            return False, "posting_date_availability_unknown"
         if statement["currency"] == "AUD" and actual != original:
             return False, "aud_amount_conflict"
         if abs(actual - estimate) / estimate > tolerance:

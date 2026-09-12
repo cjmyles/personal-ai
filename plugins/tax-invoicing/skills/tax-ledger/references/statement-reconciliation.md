@@ -26,6 +26,8 @@ Examples: a A$50 Vercel debit must not replace a US$100 invoice; two identical c
 
 Use `scripts/statement_guards.py` for the conservative ordinary one-to-one gate and archive gate. It does not discover matches, verify supplied evidence or authorise writes. Do not invent true flags to obtain a pass. Complex or unsupported cases remain Review. See its unit tests for regression examples.
 
+Date compatibility does not require identical printed dates. Within the configured posting window, verify the unique invoice, original currency/amount, billing period and absence of competing charges; record why the differing source dates remain compatible using `date_compatibility_verified` and `date_compatibility_reason`. Do not assert a timezone explanation without evidence. Outside-window or unexplained differences remain Review. If the original statement supplies only one date, leave posting date blank and set `posting_date_not_supplied` only after inspecting the source; an absent separate posting date alone must not block an otherwise definite match. If a posting date is printed, validate it normally. Once the gate passes in an authorised reconciliation, apply and read back the actual AUD correction without requesting redundant approval; retain the original estimate and audit trail.
+
 ## Apply and audit
 
 - Re-read the exact candidate immediately before a write. Reconfirm its stable source/invoice identity, original amount and prior value; row numbers alone are not stable keys. If it changed, stop and reassess.
