@@ -2,6 +2,16 @@
 
 Source-controlled personal AI configuration.
 
+## Global Codex instructions
+
+`codex/global/AGENTS.md` tracks the global customisation file, normally `~/.codex/AGENTS.md`. It is stored below `global/` so it does not become this repository's own root instructions. Only this file is synced, not the rest of `.codex`.
+
+After editing customisation in Codex settings, run `python3 codex/scripts/sync-instructions.py capture` to preview the changes, then repeat with `--write` to copy them into the repository. Review, commit and push the changed file to save the new version.
+
+After pulling an intentional change from Git, run `python3 codex/scripts/sync-instructions.py apply` to preview it, then repeat with `--write` to update the live Codex file. The script honours `CODEX_HOME`, backs up an existing destination before overwriting it, and verifies the copy. Sync is manual: it does not watch settings, resolve conflicts, commit or push. If both copies changed, reconcile the preview before copying.
+
+## Skills and plugins
+
 - `codex/skills/`: Personal Codex skills using generic, portable names.
 - `plugins/`: Personal plugins that package reusable skills for ChatGPT Work and Codex.
 - `.agents/plugins/marketplace.json`: Repository marketplace for installing personal plugins.
