@@ -1,3 +1,5 @@
 interface:
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
   display_name: "Tax Ledger"
   short_description: "Process tax evidence into a reviewable ledger"

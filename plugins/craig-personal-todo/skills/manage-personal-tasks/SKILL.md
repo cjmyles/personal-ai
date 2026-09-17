@@ -3,7 +3,7 @@ name: manage-personal-tasks
 description: "Manage Craig's personal tasks on the live Trello Personal Todo board, including keeping existing tasks current when handling their correspondence, quotes, decisions or follow-ups. Use for task updates, prioritisation, deadlines, completion and personal backlog management."
 ---
 
-# Manage Personal Tasks
+# Personal Tasks
 
 Use Trello as the source of truth for personal tasks. Keep durable workflow rules here, but always get current cards and statuses from the live board.
 

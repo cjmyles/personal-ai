@@ -3,7 +3,7 @@ name: manage-fpl-draft
 description: "Manage Craig's Premier League Fantasy Draft team with league-aware weekly analysis. Use for FPL Draft squad reviews, starting XI and bench order, waiver and free-agent recommendations, injury-return watchlists, player availability, rival squads, fixtures, transactions, trades, and waiver planning. This is Draft, not budget-based Fantasy Premier League: players are exclusive to one manager and recommendations must be based on who is actually obtainable in the league."
 ---
 
-# Manage FPL Draft
+# FPL Draft
 
 Treat Premier League Fantasy Draft as a closed player market. A strong player who is owned by a rival is not a waiver recommendation. Prices, budgets, captaincy and ordinary FPL transfer logic do not apply.
 
@@ -16,6 +16,16 @@ Treat Premier League Fantasy Draft as a closed player market. A strong player wh
 - Transactions: Waivers, free agency and trades
 
 Confirm these values from live data when possible because league membership and season identifiers can change.
+
+## Persistent Player Tracker
+
+For Craig's league, read the current Library document `D-Raft-player-tracker.md` before squad, waiver, lineup or injury-return reviews, including scheduled reviews that use this skill. Its stable Library file ID is `libfile_579f567e31908191a001d1e369f3e01f`; its canonical path is `/D-Raft-player-tracker.md`. Use the Library skill to read and update it. Resolve by the stable ID, or search the exact filename if necessary; do not depend on a previous thread's scratch path or create a duplicate.
+
+Use the tracker for continuity, not as live football evidence. Refresh ownership, pending claims, deadlines and material team news. Keep dated facts and sources separate from inference, user opinions and unresolved checks. Record surname, club, Draft position, availability timestamp, rank type and value where checked, historical scoring where available, role/minutes, injury progression, current decision, possible drop, priority, risk, fallback and a concrete reassessment trigger. Mark unknown fields rather than inventing them.
+
+After a review or authorised change, update the same document only when material information changed, preserving its Library identity and version history. Keep actual pending claims, suggested claims and completed transactions distinct. Keep tracker edits minimal: update only materially changed cells or short notes in the existing structure. Do not append full reports, repeat unchanged evidence, add routine no-change entries, expand sections or rewrite unaffected text. For a changed decision, retain only a brief dated reason; rely on document version history for older detail. If nothing material changed, leave the document untouched. Document updates do not authorise team or watchlist changes.
+
+If the tracker is inaccessible, say so and continue the useful live review with the available context; do not claim to have read or updated it. A skill publication does not itself change a Scheduled Task's prompt or guarantee that the task loads this skill and has Library access. Report scheduled-task integration as complete only after verifying it separately.
 
 ## Start With Live Data
 
@@ -75,6 +85,22 @@ Rank obtainable players by marginal value over Craig's likely drop, not by reput
 - Stash cost: bench space, uncertainty and how long value may take to arrive
 
 Prefer conditional recommendations when team news is unresolved. Give at least one fallback for an important claim. Do not recommend dropping a player without checking whether the move would leave a legal squad and whether the outgoing player is likely to be claimed immediately.
+
+## Protect Established Squad Value
+
+Before recommending a release, assess the outgoing player's official Draft rank, established season points and points per appearance, current starts and minutes, role, set pieces, defensive contributions and injury or adaptation context. Check historical totals when accessible; if unavailable, state the gap rather than inventing a track record. Identify which rank is being used: Draft rank is not current points rank or ICT rank.
+
+A strong Draft rank and established scoring record create a presumption to hold through a short poor run, especially when regular starts continue. Do not recommend releasing such a player solely because an available player has more points in the last two or three matches. Rank is evidence, not a guarantee: weigh meaningful changes in role, sustained loss of starts, injury prognosis and scoring opportunities. Account for a club change rather than assuming previous output transfers unchanged.
+
+Compare incoming and outgoing players over the next four to six gameweeks and the rest of the season, including the risk of permanently handing the outgoing player to a rival. Recommend a drop only when the expected improvement is clear enough to justify that cost; otherwise hold and give a concrete reassessment trigger. A bench goal does not establish regular starts, and a removed injury flag does not establish match fitness or a secure role.
+
+Treat Craig's opinions as input to an independent assessment, not as automatic player protection. Respect an explicit instruction not to release a player, while distinguishing it from a stated belief that the player will improve. Do not force a midfield or forward transfer merely to fill every position.
+
+## Keep Recommendations Consistent
+
+When reviewing an existing waiver list or reconciling reports, retain every original pair in the review and mark it keep, reorder, conditional or remove. Explain additions and removals before presenting the revised order; do not silently replace the list with suggestions at only one position. If Craig requests only a concise final in/out table, provide that format after reconciling the decisions.
+
+Compare with the latest recommendation when available. For a changed recommendation, identify the new evidence, changed user preference or correction to earlier reasoning. Do not present an old report as newly verified, reverse advice merely to agree with a challenge, or invent supporting news. Questions about tools or process steer the active review; answer them briefly and then finish the recommendations unless Craig cancels the task.
 
 ## Injury-Return Edge
 

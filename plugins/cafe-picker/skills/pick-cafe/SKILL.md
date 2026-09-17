@@ -3,7 +3,7 @@ name: pick-cafe
 description: "Pick, add, or update cafes for Craig using the Thao Dien Cafes Google Sheet. Use when Craig asks where to work from, wants a cafe suggestion, adds a cafe, or updates cafe notes."
 ---
 
-# Pick Cafe
+# Café Picker
 
 Use Craig's Google Sheet as the decision layer and Google Maps links as the map layer.
 
