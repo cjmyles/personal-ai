@@ -1,6 +1,6 @@
 ---
 name: manage-personal-tasks
-description: "Manage Craig's personal tasks on the live Trello Personal Todo board. Use for requests such as what should I do next, prioritise my day or week, add or update a task, mark a task complete, record that a task is waiting on someone, review deadlines, or organise the personal backlog."
+description: "Manage Craig's personal tasks on the live Trello Personal Todo board, including keeping existing tasks current when handling their correspondence, quotes, decisions or follow-ups. Use for task updates, prioritisation, deadlines, completion and personal backlog management."
 ---
 
 # Personal Tasks
@@ -80,12 +80,16 @@ Keep `Today / Now` deliberately small. Do not move a large batch there merely be
 
 ## Preserve Update History
 
+- When carrying out authorised work on an existing tracked task, updating its card is part of completing that work; do not require a separate request. Record verified correspondence and outcomes, comparable quote amounts (including GST and optional extras where relevant), decisions, responsibility and next actions. Link to supporting records and distinguish drafts, sent requests, proposals and accepted commitments.
+- If Craig points out that the task record is stale or an update was omitted, treat that as a request to correct it. Reconcile the relevant verified events, preserve earlier history and mark retrospective entries clearly; do not invent event times.
+- Read the card and its checklists before editing, then re-fetch after editing to verify the current brief and history were saved. If a connector limit prevents a complete update, preserve existing content and report the blocker rather than silently truncating history or claiming completion.
+
 - Keep the card description as the current task brief and next actions, followed by an `Update history` section.
 - For every progress update, correspondence, quote, decision, blocker, hand-off, or completion, append a new entry to `Update history` in the description. Label it `YYYY-MM-DD HH:mm TZ`, using the verified current time in Craig's timezone. Use `UTC` explicitly if his timezone cannot be resolved.
 - If the event happened at a different known time, record that event time instead. Do not invent an unknown time.
 - Preserve all existing description content and earlier history entries. Do not overwrite or delete old updates. When changing the current task brief or next actions, add a history entry explaining the material change.
 - Use a Trello comment instead only when the connected Trello tools support comments and Craig specifically requests one.
-- Apply this to future updates. Do not backfill or rewrite existing card history unless Craig asks.
+- Do not rewrite earlier history. Backfill omissions only when Craig requests a correction, including by pointing out a stale record.
 
 ## Track Responsibility and Status
 
@@ -110,7 +114,7 @@ Do not treat sending a request as completion when the desired outcome is still o
 ## Mutations and Reporting
 
 - Make only changes that are within the user's request.
-- If the user asks only for advice or status, do not mutate Trello.
+- Pure advice or status questions remain read-only unless Craig also requests a correction. Routine record-keeping for authorised task work does not authorise additional emails, commitments, purchases or unrelated changes.
 - After a mutation, state exactly what was created, changed, moved, or completed.
 - If a requested mutation cannot be performed through the available Trello connection, explain the limitation and give a concise manual fallback.
 
@@ -120,4 +124,3 @@ Do not treat sending a request as completion when the desired outcome is still o
 This skill must work from ChatGPT Work on desktop and mobile without Craig's laptop being on. For ordinary todo management, rely on the connected Trello app or Trello-capable tools, not local files, browser tabs, OneNote, or this Codex desktop session.
 
 Use local browser, Gmail, files, or repo access only when the user explicitly asks to verify or action something that requires those sources. If those sources are unavailable in a cloud/mobile chat, explain the limitation and continue with Trello-only task management where possible.
-

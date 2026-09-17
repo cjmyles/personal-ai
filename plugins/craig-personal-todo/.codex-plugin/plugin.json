@@ -1,6 +1,6 @@
 {
   "name": "craig-personal-todo",
-  "version": "0.1.0+codex.20260910023657",
+  "version": "0.1.1",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work.",
   "author": {
     "name": "Craig Myles",
