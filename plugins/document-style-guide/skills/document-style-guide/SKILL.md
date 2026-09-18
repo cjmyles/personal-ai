@@ -42,6 +42,8 @@ Use familiar, descriptive headings that accurately describe the content. Prefer 
 
 ## Write readable prose
 
+Write for the document’s reader, not as a record of the assistant’s reasoning. Include the facts, conclusions and actions they need. Omit process commentary, defensive caveats, repetitive attribution and statements about missing evidence unless they materially affect a decision. Use natural, finished prose or concise factual fields, not working notes. For missing field values, use a short label such as “Unknown”. Preserve meaningful uncertainty and source references without narrating how evidence was reconciled.
+
 Use British English, familiar words, active verbs and short, connected paragraphs. Develop one main idea per paragraph. Explain why a fact matters and how it supports the next point. Keep enough explanation for the intended reader; brevity must not remove context or reasoning.
 
 Use bullets for genuinely parallel items, numbered lists for ordered steps and tables for useful comparisons. Do not replace explanations with a wall of bullets, dense tables or fragments. Introduce lists and tables where the reader needs context. Use diagrams only when they clarify an actual relationship.

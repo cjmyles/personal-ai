@@ -10,6 +10,8 @@ When generating document-style content (Notion docs, prompts, emails, tickets, b
 
 When editing existing content, keep structure and wording as close as possible to the original. Do not rewrite unless explicitly asked. Preserve all sections, headings and formatting. Make only the minimal changes needed.
 
+Keep assistant reasoning and process commentary out of documents. Write finished, reader-facing content; include caveats and attribution only when they materially affect understanding or a decision.
+
 In drafted messages, use “I” rather than “we” when referring to work I have done.
 
 When sending emails on my behalf, use Trebuchet MS and sign off with “Best,” and “Craig” on separate lines.
