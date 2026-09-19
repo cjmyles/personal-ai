@@ -31,3 +31,7 @@ The `craig-email` plugin contains the `write-craig-email` skill for drafting and
 Use short, descriptive Title Case display names for every skill and plugin. Omit “Craig” and “Manage” prefixes. Give a plugin and its single main skill the same display name. Preserve existing machine identifiers to keep installed plugins, saved prompts and integrations working.
 
 The `document-style-guide` plugin is the canonical home of the `document-style-guide` skill. It covers document structure, references, appendices, minimal editing and readable paragraph spacing in all assistant replies.
+
+## FPL Draft workflow assets
+
+The [FPL Draft skill](plugins/fpl-draft/skills/manage-fpl-draft/SKILL.md) reads live Draft league data and official team news, records decisions and outcomes in [Google Sheets](https://docs.google.com/spreadsheets/d/1JrauLxOESM6MO--1jzzkNhR7J4GtN97QjAWRxKKfQ1E/edit), and maintains one concise [Notion dashboard](https://app.notion.com/p/3e0fc8ce55dd81598575e2ac1f649d4d). The [reporting contract](plugins/fpl-draft/skills/manage-fpl-draft/references/reporting-and-learning.md) documents ownership, schedules, data schemas and failure handling. Reports adapt to live gameweek deadlines; team changes always require Craig’s explicit approval.

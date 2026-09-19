@@ -17,19 +17,15 @@ Treat Premier League Fantasy Draft as a closed player market. A strong player wh
 
 Confirm these values from live data when possible because league membership and season identifiers can change.
 
-## Persistent Player Tracker
+## Persistent Records and Reports
 
-For Craig's league, read the current Library document `D-Raft-player-tracker.md` before squad, waiver, lineup or injury-return reviews, including scheduled reviews that use this skill. Its stable Library file ID is `libfile_579f567e31908191a001d1e369f3e01f`; its canonical path is `/D-Raft-player-tracker.md`. Use the Library skill to read and update it. Resolve by the stable ID, or search the exact filename if necessary; do not depend on a previous thread's scratch path or create a duplicate.
+Read `references/reporting-and-learning.md` before reviews or scheduled reports. It defines the connected Google Sheet, single Notion dashboard, report selection, record schemas and evaluation rules. The Sheet is the canonical decision/result history; Notion is a concise current dashboard, not a database. The old Library tracker is historical context only.
 
-Use the tracker for continuity, not as live football evidence. Refresh ownership, pending claims, deadlines and material team news. Keep dated facts and sources separate from inference, user opinions and unresolved checks. Record surname, club, Draft position, availability timestamp, rank type and value where checked, historical scoring where available, role/minutes, injury progression, current decision, possible drop, priority, risk, fallback and a concrete reassessment trigger. Mark unknown fields rather than inventing them.
-
-After a review or authorised change, update the same document only when material information changed, preserving its Library identity and version history. Keep actual pending claims, suggested claims and completed transactions distinct. Keep tracker edits minimal: update only materially changed cells or short notes in the existing structure. Do not append full reports, repeat unchanged evidence, add routine no-change entries, expand sections or rewrite unaffected text. For a changed decision, retain only a brief dated reason; rely on document version history for older detail. If nothing material changed, leave the document untouched. Document updates do not authorise team or watchlist changes.
-
-If the tracker is inaccessible, say so and continue the useful live review with the available context; do not claim to have read or updated it. A skill publication does not itself change a Scheduled Task's prompt or guarantee that the task loads this skill and has Library access. Report scheduled-task integration as complete only after verifying it separately.
+Read existing records before refreshing live data. Preserve prospective reasons, distinguish recommendations, pending claims and completed moves, and record later outcomes without hindsight. Make minimal targeted dashboard edits and never append full reports. Disclose any unavailable source or failed write. Skill publication and scheduled-task updates are separate operations and must each be verified.
 
 ## Start With Live Data
 
-1. Use the signed-in in-app browser when the task needs Craig's current team, pending waivers, trade inbox or another authenticated view.
+1. Prefer read-only public APIs for squad and league data. Use the signed-in browser only for pending waivers, trade inbox or other private views unavailable through authorised read-only access. Never extract or persist credentials.
 2. Use `scripts/fpl_draft_snapshot.py` for repeatable public league data. It retrieves allowlisted `GET` endpoints concurrently and includes enriched squads, season statistics, next-three fixtures, live scores and match status; it never authenticates or mutates the team.
 3. Read `references/api.md` before inspecting the website or calling Draft endpoints directly.
 4. Treat the live Draft site as authoritative for ownership, deadlines, accepted transactions and league rules.
@@ -49,7 +45,7 @@ To spot improving injury signals, save snapshots and compare the newest one with
 python3 scripts/fpl_draft_snapshot.py --entry-id 184598 --league-id 35686 --previous previous.json --pretty
 ```
 
-## Weekly Workflow
+## Review Workflow
 
 1. Establish the current gameweek, deadline, waiver processing time and whether free agency is open.
 2. Determine whether an official Premier League transfer window is open or closed within the previous 72 hours. Only in that period, compare the newest snapshot with the preceding snapshot and review every player in `new_players_since_previous` and `changed_players_since_previous`, prioritised by Draft rank.
@@ -64,7 +60,7 @@ python3 scripts/fpl_draft_snapshot.py --entry-id 184598 --league-id 35686 --prev
 
 ## New Signing Edge
 
-Treat newly signed or newly registered players as a separate time-sensitive market only while an official Premier League transfer window is open and for 72 hours after it closes, allowing for Draft registration lag. Verify the season's official opening and closing dates rather than assuming them. Within that period, scan official transfer announcements and the Draft registration feed daily when practical; the ordinary Monday/Thursday injury cadence is insufficient. Outside it, do not run a routine signing scan. For every arrival:
+Treat newly signed or newly registered players as a separate time-sensitive market only while an official Premier League transfer window is open and for 72 hours after it closes, allowing for Draft registration lag. Verify the season's official opening and closing dates rather than assuming them. Within that period, scan official transfer announcements and the Draft registration feed daily when practical; a twice-weekly injury cadence is insufficient. Outside it, do not run a routine signing scan. For every arrival:
 
 - Record announcement date, Draft registration status, Draft rank, position and league availability
 - Assess likely role, route to starts, recent minutes at the previous club and expected adaptation time
@@ -86,7 +82,7 @@ Rank obtainable players by marginal value over Craig's likely drop, not by reput
 
 Prefer conditional recommendations when team news is unresolved. Give at least one fallback for an important claim. Do not recommend dropping a player without checking whether the move would leave a legal squad and whether the outgoing player is likely to be claimed immediately.
 
-## Protect Established Squad Value
+## Preserve Core Value and Improve Replaceable Slots
 
 Before recommending a release, assess the outgoing player's official Draft rank, established season points and points per appearance, current starts and minutes, role, set pieces, defensive contributions and injury or adaptation context. Check historical totals when accessible; if unavailable, state the gap rather than inventing a track record. Identify which rank is being used: Draft rank is not current points rank or ICT rank.
 
@@ -98,11 +94,13 @@ Treat Craig's opinions as input to an independent assessment, not as automatic p
 
 ## Keep Recommendations Consistent
 
-When reviewing an existing waiver list or reconciling reports, retain every original pair in the review and mark it keep, reorder, conditional or remove. Explain additions and removals before presenting the revised order; do not silently replace the list with suggestions at only one position. If Craig requests only a concise final in/out table, provide that format after reconciling the decisions.
+When reviewing an existing waiver list or reconciling reports, list every actual original pair exactly as submitted and mark it keep, reorder, conditional or remove. If changing the drop, write e.g. “Murillo for Mitchell — keep, but replace Khusanov instead of Mitchell.” Explain additions and removals before presenting the revised order; do not silently replace the list with suggestions at only one position. If Craig requests only a concise final in/out table, provide that format after reconciling the decisions.
 
 Compare with the latest recommendation when available. For a changed recommendation, identify the new evidence, changed user preference or correction to earlier reasoning. Do not present an old report as newly verified, reverse advice merely to agree with a challenge, or invent supporting news. Questions about tools or process steer the active review; answer them briefly and then finish the recommendations unless Craig cancels the task.
 
 ## Injury-Return Edge
+
+Review every obtainable flagged player and previously injured player whose flag cleared; do not filter the injury scan by recent points or minutes. Aim to spot value two to six weeks before a likely first start. Count fixtures missed during international breaks and weigh rival demand against the cost of waiting for certainty. A claim can be worthwhile before a player is ready for the starting XI.
 
 The main edge is often claiming a valuable player before the Draft market fully reacts. Look for changes, not merely an injury flag:
 
@@ -120,12 +118,7 @@ Do not equate medical clearance with immediate fantasy value. Assess match fitne
 
 Lead with the decision. In player tables, use the player's commonly recognised surname, the official three-letter club abbreviation and Draft position (`GKP`, `DEF`, `MID` or `FWD`) as separate columns. For compound surnames such as `De Cuyper`, retain the complete surname. Spell out a club name in prose only when an abbreviation could be ambiguous.
 
-For a standard weekly review, present three compact tables before suggesting any paired moves. Add `New signings and registrations` as the first table only during the transfer-window monitoring period or when a material new player is detected:
-
-- Conditional `New signings and registrations`: Every relevant arrival or newly registered player since the preceding review, including players not yet obtainable, with club, position, Draft rank, registration/ownership state, likely role and action timing.
-1. `Craig's squad`: Player, Club, Position, recent form and minutes, next three fixtures with `(H)` or `(A)`, fitness or role, and `Hold`, `Monitor`, `Open to swap` or `Priority problem`.
-2. `Available players`: Only genuinely obtainable players, with the same club, position, form, minutes and next-three-fixture fields, plus role risk and `Claim soon`, `Watch`, `Free-agency option` or `Avoid`.
-3. `Injury-return radar`: Player, Club, Position, injury, expected return, individual/partial/full training or match involvement, evidence date and source, first-start outlook, and action timing.
+Select report content using the live gameweek and deadlines in `references/reporting-and-learning.md`, not fixed weekdays. Routine updates contain only material changes. Pre-waiver reports give ordered paired claims; post-waiver reports give actual transfers and a legal XI/bench; live reports distinguish provisional scores; final reviews assess decisions and market opportunities. Suppress quiet days. Include full squad, available-player and injury tables only for an explicitly requested comprehensive review, not every notification.
 
 Use the same compact `Player | Club | Pos` convention in every squad, availability, new-signing, injury and waiver table. Opponent abbreviations are acceptable in the fixture column when each fixture still shows home or away. State the form window and data timestamp. Where the latest gameweek is unfinished, identify the affected players and treat their form as provisional.
 

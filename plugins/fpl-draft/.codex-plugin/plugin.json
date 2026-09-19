@@ -1,7 +1,7 @@
 {
   "name": "fpl-draft",
-  "version": "0.1.0+codex.20260910022656",
-  "description": "League-aware Premier League Fantasy Draft analysis, injury-return monitoring and waiver planning.",
+  "version": "0.2.0",
+  "description": "League-aware Draft decisions, daily reports and Google Sheets learning with a concise Notion dashboard.",
   "author": {
     "name": "Craig Myles",
     "url": "https://github.com/cjmyles"
