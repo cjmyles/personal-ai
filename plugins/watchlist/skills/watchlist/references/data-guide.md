@@ -19,7 +19,7 @@ Watchlist contains one row per title with these columns:
 | Type | TV or Film |
 | Status | Unconfirmed, Want to watch, Watching, Watched, Paused, Dropped or Not interested |
 | Progress | User wording, including only confirmed season, episode or completion details |
-| Rating | User's value and scale, or exact wording if the scale is unknown |
+| My rating | User's value and scale, or exact wording if the scale is unknown |
 | Notes | User statements, with separate notes on separate lines |
 | Release year | Disambiguating year when known |
 | Scope | series, film or a named season |
@@ -28,6 +28,9 @@ Watchlist contains one row per title with these columns:
 | Updated at | Last record update date |
 | ID | Unique stable title ID, retained through sorting and renaming |
 | Source ID | Source identifier, blank when none applies |
+| IMDb rating | Verified IMDb weighted score out of 10; blank when unavailable |
+| IMDb link | Canonical URL for the verified matching IMDb title |
+| Rating checked on | Date the recorded IMDb score was successfully checked |
 
 Leave unknown cells blank. Dates describe record maintenance, never assumed viewing dates. Use ISO dates or timestamps and Craig's timezone, defaulting to Asia/Ho_Chi_Minh. Preserve the user's rating scale and wording.
 
