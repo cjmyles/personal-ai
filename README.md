@@ -22,18 +22,18 @@ Run `./codex/scripts/validate.sh`, then `./codex/scripts/install.sh`.
 
 The installer backs up an existing skill with the same generic name before replacing it. Legacy `craig-*` skills remain installed until removed deliberately.
 
-The `fpl-draft` plugin is the canonical home of the `manage-fpl-draft` skill. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
+The `fpl-draft` plugin is the canonical home of the `fpl-draft` skill. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
 
 The `tax-invoicing` plugin is the canonical home of `tax-ledger` and `invoice-ledger`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.
 
-The `craig-email` plugin (Email Assistant) contains the `write-craig-email` skill for drafting and sending email in Craig's preferred voice and Trebuchet MS formatting. It uses the available email integration rather than bundling credentials or a mail connector.
+The `email-assistant` plugin (Email Assistant) contains the `email-assistant` skill for drafting and sending email in Craig's preferred voice and Trebuchet MS formatting. It uses the available email integration rather than bundling credentials or a mail connector.
 
-Use short, descriptive Title Case display names for every skill and plugin. Omit “Craig” and “Manage” prefixes. Give a plugin and its single main skill the same display name. Preserve existing machine identifiers to keep installed plugins, saved prompts and integrations working. See [AGENTS.md](AGENTS.md#plugin-and-skill-names-and-icons) for the naming and icon conventions.
+Use short, descriptive Title Case display names for every skill and plugin. Omit “Craig” and “Manage” prefixes. Give a plugin and its single main skill the same display name and matching lowercase hyphenated identifiers and folder names. Update installed plugins, saved prompts and integrations together when renaming. See [AGENTS.md](AGENTS.md#plugin-and-skill-names-and-icons) for the naming and icon conventions.
 
 The `document-style-guide` plugin is the canonical home of the `document-style-guide` skill. It covers document structure, references, appendices, minimal editing and readable paragraph spacing in all assistant replies.
 
-The `watchlist` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `watchlist@personal` from the Personal marketplace. Its canonical viewing record is the `TV & Movies` Google spreadsheet in the `ChatGPT` folder in Craig's connected Google Drive; all installations read and update that shared spreadsheet. Viewing records are no longer stored in this repository.
+The `tv-movies` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `tv-movies@personal` from the Personal marketplace. Its canonical viewing record is the `TV & Movies` Google spreadsheet in the `ChatGPT` folder in Craig's connected Google Drive; all installations read and update that shared spreadsheet. Viewing records are no longer stored in this repository.
 
 ## FPL Draft workflow assets
 
-The [FPL Draft skill](plugins/fpl-draft/skills/manage-fpl-draft/SKILL.md) reads live Draft league data and official team news, records decisions and outcomes in [Google Sheets](https://docs.google.com/spreadsheets/d/1JrauLxOESM6MO--1jzzkNhR7J4GtN97QjAWRxKKfQ1E/edit), and maintains one concise [Notion dashboard](https://app.notion.com/p/3e0fc8ce55dd81598575e2ac1f649d4d). The [reporting contract](plugins/fpl-draft/skills/manage-fpl-draft/references/reporting-and-learning.md) documents ownership, schedules, data schemas and failure handling. Reports adapt to live gameweek deadlines; team changes always require Craig’s explicit approval.
+The [FPL Draft skill](plugins/fpl-draft/skills/fpl-draft/SKILL.md) reads live Draft league data and official team news, records decisions and outcomes in [Google Sheets](https://docs.google.com/spreadsheets/d/1JrauLxOESM6MO--1jzzkNhR7J4GtN97QjAWRxKKfQ1E/edit), and maintains one concise [Notion dashboard](https://app.notion.com/p/3e0fc8ce55dd81598575e2ac1f649d4d). The [reporting contract](plugins/fpl-draft/skills/fpl-draft/references/reporting-and-learning.md) documents ownership, schedules, data schemas and failure handling. Reports adapt to live gameweek deadlines; team changes always require Craig’s explicit approval.

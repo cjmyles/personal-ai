@@ -1,6 +1,6 @@
 {
   "name": "fpl-draft",
-  "version": "0.2.0+codex.20260928025303",
+  "version": "0.2.1",
   "description": "League-aware Draft decisions, daily reports and Google Sheets learning with a concise Notion dashboard.",
   "author": {
     "name": "Craig Myles",

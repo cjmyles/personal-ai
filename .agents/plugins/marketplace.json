@@ -17,10 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "craig-personal-todo",
+      "name": "personal-todo",
       "source": {
         "source": "local",
-        "path": "./plugins/craig-personal-todo"
+        "path": "./plugins/personal-todo"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -53,10 +53,10 @@
       "category": "Productivity"
     },
     {
-      "name": "craig-email",
+      "name": "email-assistant",
       "source": {
         "source": "local",
-        "path": "./plugins/craig-email"
+        "path": "./plugins/email-assistant"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -77,10 +77,10 @@
       "category": "Productivity"
     },
     {
-      "name": "watchlist",
+      "name": "tv-movies",
       "source": {
         "source": "local",
-        "path": "./plugins/watchlist"
+        "path": "./plugins/tv-movies"
       },
       "policy": {
         "installation": "AVAILABLE",

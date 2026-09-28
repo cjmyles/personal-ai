@@ -8,7 +8,7 @@ The global customisation file is tracked at `codex/global/AGENTS.md`; the live c
 
 ## Plugin and skill names and icons
 
-Use short, descriptive Title Case display names. Give each single-skill plugin and its skill the same display name. Use an umbrella name for a multi-skill plugin and specific names for its skills. Preserve existing plugin identifiers, skill invocation names and directory names when changing display names. Keep the main SKILL.md heading consistent with the skill display name.
+Use short, descriptive Title Case display names. Give each single-skill plugin and its skill the same display name. Use an umbrella name for a multi-skill plugin and specific names for its skills. Use matching lowercase hyphenated plugin identifiers, skill invocation names and directory names: personal-todo, cafe-picker, email-assistant, fpl-draft, tv-movies and document-style-guide. Tax & Invoicing uses tax-invoicing with tax-ledger and invoice-ledger skills. Update manifests, marketplace entries, prompts and references together when renaming. Keep the main SKILL.md heading consistent with the skill display name.
 
 The approved display names are Café Picker, Email Assistant, Personal Todo, Document Style Guide, FPL Draft and TV & Movies. Tax & Invoicing contains Tax Ledger and Invoice Ledger.
 

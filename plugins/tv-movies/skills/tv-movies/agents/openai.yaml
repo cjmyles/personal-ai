@@ -1,0 +1,9 @@
+interface:
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  display_name: "TV & Movies"
+  short_description: Track films, TV shows and what to watch next
+  default_prompt: Use $tv-movies to update my films and TV shows and help me choose
+    what to watch next.
+policy:
+  allow_implicit_invocation: true
