@@ -1,9 +1,10 @@
 {
   "title": "Daily Briefing",
-  "enabled": false,
+  "enabled": true,
   "timezone": "Asia/Ho_Chi_Minh",
-  "schedule": null,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Ho_Chi_Minh:20260929T080000\nRRULE:FREQ=DAILY;BYHOUR=8;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
   "automation_id": null,
   "prompt": "Run $daily-briefing from the Personal Todo plugin. Follow its workflow and the Personal Todo skill, reconcile verified personal-email progress into existing Trello cards, and deliver today's priorities, material changes and decisions needed. Read and save persistent run state as instructed. Report incomplete access or failed saves clearly.",
-  "status": "Awaiting an agreed schedule; no live automation created."
+  "status": "Enabled. Resolve the live automation by the exact title Daily Briefing; the private automation identifier is not stored in this repository.",
+  "timing_mode": "flexible_schedule"
 }
