@@ -1,0 +1,32 @@
+{
+  "name": "watchlist",
+  "version": "0.1.0",
+  "description": "Track films and TV shows, viewing progress, ratings and what to watch next.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": [
+    "films",
+    "tv",
+    "watchlist"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Watchlist",
+    "shortDescription": "Track films, TV shows and what to watch next.",
+    "longDescription": "Track viewing status, episode progress, ratings and notes, with a 100-show starter catalogue and one shared GitHub viewing record.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Viewing history",
+      "Watchlist"
+    ],
+    "defaultPrompt": [
+      "Use $watchlist to show my watchlist.",
+      "Use $watchlist to record what I have watched."
+    ]
+  }
+}

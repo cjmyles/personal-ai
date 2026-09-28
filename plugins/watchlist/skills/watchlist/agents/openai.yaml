@@ -1,0 +1,14 @@
+interface:
+  display_name: Watchlist
+  short_description: Track films, TV shows and what to watch next
+  default_prompt: Use $watchlist to update my films and TV shows and help me choose
+    what to watch next.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
