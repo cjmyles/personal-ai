@@ -32,7 +32,7 @@ Use short, descriptive Title Case display names for every skill and plugin. Omit
 
 The `document-style-guide` plugin is the canonical home of the `document-style-guide` skill. It covers document structure, references, appendices, minimal editing and readable paragraph spacing in all assistant replies.
 
-The `watchlist` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `watchlist@personal` from the Personal marketplace. Its canonical viewing record is `plugins/watchlist/skills/watchlist/references/watchlist.json` on GitHub; installed copies read that shared record to avoid divergent histories. This repository and its viewing record are public.
+The `watchlist` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `watchlist@personal` from the Personal marketplace. Its canonical viewing record is the `TV & Movies` Google spreadsheet in the `ChatGPT` folder in Craig's connected Google Drive; all installations read and update that shared spreadsheet. Viewing records are no longer stored in this repository.
 
 ## FPL Draft workflow assets
 
