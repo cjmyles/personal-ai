@@ -26,13 +26,13 @@ The `fpl-draft` plugin is the canonical home of the `manage-fpl-draft` skill. In
 
 The `tax-invoicing` plugin is the canonical home of `tax-ledger` and `invoice-ledger`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.
 
-The `craig-email` plugin contains the `write-craig-email` skill for drafting and sending email in Craig's preferred voice and Trebuchet MS formatting. It uses the available email integration rather than bundling credentials or a mail connector.
+The `craig-email` plugin (Email Assistant) contains the `write-craig-email` skill for drafting and sending email in Craig's preferred voice and Trebuchet MS formatting. It uses the available email integration rather than bundling credentials or a mail connector.
 
-Use short, descriptive Title Case display names for every skill and plugin. Omit “Craig” and “Manage” prefixes. Give a plugin and its single main skill the same display name. Preserve existing machine identifiers to keep installed plugins, saved prompts and integrations working.
+Use short, descriptive Title Case display names for every skill and plugin. Omit “Craig” and “Manage” prefixes. Give a plugin and its single main skill the same display name. Preserve existing machine identifiers to keep installed plugins, saved prompts and integrations working. See [AGENTS.md](AGENTS.md#plugin-and-skill-names-and-icons) for the naming and icon conventions.
 
 The `document-style-guide` plugin is the canonical home of the `document-style-guide` skill. It covers document structure, references, appendices, minimal editing and readable paragraph spacing in all assistant replies.
 
-The `watchlist` plugin tracks films and TV shows, viewing progress, ratings and notes. Install `watchlist@personal` from the Personal marketplace. Its canonical viewing record is `plugins/watchlist/skills/watchlist/references/watchlist.json` on GitHub; installed copies read that shared record to avoid divergent histories. This repository and its viewing record are public.
+The `watchlist` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `watchlist@personal` from the Personal marketplace. Its canonical viewing record is `plugins/watchlist/skills/watchlist/references/watchlist.json` on GitHub; installed copies read that shared record to avoid divergent histories. This repository and its viewing record are public.
 
 ## FPL Draft workflow assets
 

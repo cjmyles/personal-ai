@@ -1,4 +1,6 @@
 interface:
+  icon_small: "./assets/cafe-pin.png"
+  icon_large: "./assets/cafe-pin.png"
   display_name: "Café Picker"
   short_description: "Choose a Thao Dien cafe quickly"
   default_prompt: "Use $pick-cafe to pick one cafe and one backup from my Thao Dien Cafes Google Sheet."

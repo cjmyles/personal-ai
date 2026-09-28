@@ -1,6 +1,6 @@
 {
   "name": "watchlist",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260928025303",
   "description": "Track films and TV shows, viewing progress, ratings and what to watch next.",
   "author": {
     "name": "Craig Myles",
@@ -15,7 +15,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Watchlist",
+    "displayName": "TV & Movies",
     "shortDescription": "Track films, TV shows and what to watch next.",
     "longDescription": "Track viewing status, episode progress, ratings and notes, with a 100-show starter catalogue and one shared GitHub viewing record.",
     "developerName": "Craig Myles",
@@ -27,6 +27,8 @@
     "defaultPrompt": [
       "Use $watchlist to show my watchlist.",
       "Use $watchlist to record what I have watched."
-    ]
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }

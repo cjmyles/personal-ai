@@ -1,6 +1,6 @@
 {
   "name": "craig-personal-todo",
-  "version": "0.1.2",
+  "version": "0.1.2+codex.20260928025303",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work. Defaults to Craig's personal Gmail when personal task work needs email.",
   "author": {
     "name": "Craig Myles",
@@ -16,7 +16,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Personal Tasks",
+    "displayName": "Personal Todo",
     "shortDescription": "Manage Craig's Trello Personal Todo board.",
     "longDescription": "Read, prioritise and update Craig's personal todo system using the Trello Personal Todo board as the source of truth across desktop and mobile ChatGPT Work. When personal todo work needs email, use Craig's personal Gmail by default unless another account is explicitly requested.",
     "developerName": "Craig Myles",

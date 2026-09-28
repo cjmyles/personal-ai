@@ -2,7 +2,7 @@
 name: watchlist
 description: Track Craig's films and TV shows he wants to watch, is watching or has watched. Use when adding titles to his watchlist, recording viewing progress or ratings, listing watched or unwatched titles, choosing what to watch next, or checking where to stream a tracked title. Includes a starter catalogue of 100 TV shows from Craig's supplied NYT checklist image.
 ---
-# Watchlist
+# TV & Movies
 
 Use the canonical viewing record in `cjmyles/personal-ai` on `main` at `plugins/watchlist/skills/watchlist/references/watchlist.json`. Fetch that file through the connected GitHub service or a current repository checkout before answering or updating viewing history. The bundled `references/watchlist.json` is a snapshot: use it only if GitHub is unavailable, explicitly report that it may be stale, and do not claim an update was saved. Never rely on conversation memory instead. Read `references/data-guide.md` for the schema and source details.
 
