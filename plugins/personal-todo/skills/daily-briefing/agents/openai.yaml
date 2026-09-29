@@ -1,7 +1,7 @@
 interface:
   display_name: "Daily Briefing"
-  short_description: "Daily priorities, email changes and next actions"
-  default_prompt: "Use $daily-briefing to review my personal emails and Trello tasks, update verified progress and give me today's priorities."
+  short_description: "Daily priorities, calendar events and email updates"
+  default_prompt: "Use $daily-briefing to review my personal emails, calendar and Trello tasks, update verified progress and give me today's priorities and events, including the full week ahead on Mondays."
   icon_small: "./assets/icon.png"
   icon_large: "./assets/icon.png"
 policy:
