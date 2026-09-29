@@ -1,6 +1,6 @@
 {
   "name": "personal-todo",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work. Defaults to Craig's personal Gmail when personal task work needs email.",
   "author": {
     "name": "Craig Myles",
@@ -18,7 +18,7 @@
   "interface": {
     "displayName": "Personal Todo",
     "shortDescription": "Manage Craig's Trello Personal Todo board.",
-    "longDescription": "Read, prioritise and update Craig's personal todo system using the Trello Personal Todo board as the source of truth across desktop and mobile ChatGPT Work. Daily Briefing reviews personal email and Google Calendar, records verified task progress, proposes today's priorities and events, and includes the full week ahead on Mondays. When personal todo work needs email, use Craig's personal Gmail by default unless another account is explicitly requested.",
+    "longDescription": "Read, prioritise and update Craig's personal todo system using the Trello Personal Todo board as the source of truth across desktop and mobile ChatGPT Work. Daily Briefing reviews personal email and Google Calendar, records verified task progress, proposes today's priorities and events, and includes the full week ahead on Mondays. When personal todo work needs email, use Craig's personal Gmail by default unless another account is explicitly requested. Keep bills, renewals and dated personal reminders linked between Trello and Calendar with advance notifications and verified payment rollover.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [

@@ -79,6 +79,10 @@ Keep `Today / Now` deliberately small. Do not move a large batch there merely be
 - Preserve useful existing context when updating a card.
 - Avoid storing unnecessary sensitive health, financial, tax, insurance, estate, or identity details in Trello.
 
+## Linked reminders
+
+For bills, renewals and dated personal reminders, read and follow [Linked reminders](references/linked-reminders.md). Maintain both Trello and Google Calendar under Craig's standing authorisation. Apply its recurring-period completion rules instead of closing the whole obligation after one payment.
+
 ## Preserve Update History
 
 - When carrying out authorised work on an existing tracked task, updating its card is part of completing that work; do not require a separate request. Record verified correspondence and outcomes, comparable quote amounts (including GST and optional extras where relevant), decisions, responsibility and next actions. Link to supporting records and distinguish drafts, sent requests, proposals and accepted commitments.
