@@ -26,6 +26,13 @@ Write natural, concise email that sounds like Craig and fits the recipient and c
 - A plain-text message cannot specify a font. Do not claim Trebuchet MS was preserved when only plain text was sent.
 - Avoid decorative layouts, excessive emphasis, tracking pixels, external images, or elaborate signatures unless Craig asks for them.
 
+## Sender account
+
+- Reply from the account that received the original email unless Craig explicitly requests another sender. Verify the source mailbox and From address, and use that account for the draft and send operation. Do not default to his personal account for Sloop correspondence.
+- Treat the Gmail draft and the inline email card as separate sending surfaces. Creating a draft in the correct account does not prove the card uses that account. Verify the card's selected sender independently before presenting it as ready to send; never invent unsupported writing-block sender attributes.
+- If the inline card's sender cannot be set or verified, provide a link to the draft in the correct Gmail account and identify the sending address. Do not offer an unverified inline send card.
+- After sending, verify the actual From address as well as recipients, reply context and SENT state. If the wrong account was used, report it clearly; do not resend or send a correction without explicit authorisation.
+
 ## Drafting and sending
 
 - Ground replies in the actual thread when it is available. Preserve the subject and reply context rather than starting an unrelated conversation.
