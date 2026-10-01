@@ -1,6 +1,6 @@
 {
   "name": "fpl-draft",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "League-aware Draft decisions, daily reports and Google Sheets learning with a concise Notion dashboard.",
   "author": {
     "name": "Craig Myles",
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "FPL Draft",
     "shortDescription": "League-aware waivers, injuries and team selection.",
-    "longDescription": "Manage a closed-market Premier League Fantasy Draft league using live ownership, available players, fixtures, injury-return evidence and waiver priority.",
+    "longDescription": "Manage a closed-market Premier League Fantasy Draft league using live ownership, available players, fixtures, injury-return evidence and waiver priority. FPL Draft Daily Briefing handles daily reports and spoiler-free Thrillr ratings using the main FPL Draft skill.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [
@@ -29,7 +29,8 @@
     "defaultPrompt": [
       "Review my FPL Draft squad and available players.",
       "Find injury-return waiver targets in my league.",
-      "Check my proposed waivers and rank the alternatives."
+      "Check my proposed waivers and rank the alternatives.",
+      "Use $fpl-draft-daily-briefing to run my FPL Draft Daily Briefing."
     ],
     "brandColor": "#38003C",
     "composerIcon": "./assets/pl-lion.png",

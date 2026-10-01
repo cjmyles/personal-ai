@@ -1,6 +1,6 @@
 {
   "name": "personal-todo",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Craig's Trello-backed personal todo workflow for desktop and mobile ChatGPT Work. Defaults to Craig's personal Gmail when personal task work needs email.",
   "author": {
     "name": "Craig Myles",

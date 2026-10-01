@@ -19,6 +19,8 @@ Confirm these values from live data when possible because league membership and 
 
 ## Persistent Records and Reports
 
+Use [FPL Draft Daily Briefing](../fpl-draft-daily-briefing/SKILL.md) for the scheduled daily interaction, report selection and Thrillr ratings. Keep reusable football analysis and team permissions in this main skill.
+
 Read `references/reporting-and-learning.md` before reviews or scheduled reports. It defines the connected Google Sheet, single Notion dashboard, report selection, record schemas and evaluation rules. The Sheet is the canonical decision/result history; Notion is a concise current dashboard, not a database. The old Library tracker is historical context only.
 
 Read existing records before refreshing live data. Preserve prospective reasons, distinguish recommendations, pending claims and completed moves, and record later outcomes without hindsight. Make minimal targeted dashboard edits and never append full reports. Disclose any unavailable source or failed write. Skill publication and scheduled-task updates are separate operations and must each be verified.
@@ -118,7 +120,7 @@ Do not equate medical clearance with immediate fantasy value. Assess match fitne
 
 Lead with the decision. In player tables, use the player's commonly recognised surname, the official three-letter club abbreviation and Draft position (`GKP`, `DEF`, `MID` or `FWD`) as separate columns. For compound surnames such as `De Cuyper`, retain the complete surname. Spell out a club name in prose only when an abbreviation could be ambiguous.
 
-Select report content using the live gameweek and deadlines in `references/reporting-and-learning.md`, not fixed weekdays. Routine updates contain only material changes. Pre-waiver reports give ordered paired claims; post-waiver reports give actual transfers and a legal XI/bench; live reports distinguish provisional scores; final reviews assess decisions and market opportunities. Suppress quiet days. Include full squad, available-player and injury tables only for an explicitly requested comprehensive review, not every notification.
+For daily reports, select content using the live gameweek and deadlines in the sibling FPL Draft Daily Briefing skill, not fixed weekdays. Routine updates contain only material changes. Pre-waiver reports give ordered paired claims; post-waiver reports give actual transfers and a legal XI/bench; live reports distinguish provisional scores; final reviews assess decisions and market opportunities. Daily briefings always include a visible completion or coverage-gap status, even on quiet days. Include full squad, available-player and injury tables only for an explicitly requested comprehensive review, not every notification.
 
 Use the same compact `Player | Club | Pos` convention in every squad, availability, new-signing, injury and waiver table. Opponent abbreviations are acceptable in the fixture column when each fixture still shows home or away. State the form window and data timestamp. Where the latest gameweek is unfinished, identify the affected players and treat their form as provisional.
 

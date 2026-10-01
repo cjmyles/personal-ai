@@ -5,9 +5,11 @@ description: Prepare Craig's daily personal briefing from live Trello tasks, per
 
 # Daily Briefing
 
+Load this skill and all required references from the current `main` branch of `cjmyles/personal-ai` through the connected GitHub app on each run. Resolve relative links against the referring file's repository directory. If canonical instructions cannot be read, report the failure rather than substituting memory or a stale installed copy.
+
 Read [Personal Todo](../personal-todo/SKILL.md) before each run. Use it for all Trello reading, checklist inspection, updates, timestamps and status rules. Keep those rules in that skill rather than maintaining a second implementation here. If it cannot be loaded, report the missing dependency and make no Trello changes.
 
-Use connected cloud services so the workflow works without Craig's laptop. Default to Craig's personal Gmail and Asia/Ho_Chi_Minh; honour an explicitly supplied account or timezone. Verify the current local date and time. Do not infer travel or a timezone change from an old conversation.
+Use connected cloud services so the workflow works without Craig's laptop. Default to Craig's personal Gmail and Google Calendar account (`cr@igmyles.com`) and Asia/Ho_Chi_Minh; honour an explicitly supplied account or timezone. Verify the current local date and time. Do not infer travel or a timezone change from an old conversation.
 
 ## Modes and authority
 
@@ -64,6 +66,8 @@ After completing all required reads and verified writes and preparing the briefi
 
 ## Scheduling
 
-Keep workflow logic here. Use [Schedule configuration](references/schedule.json) for the invocation and agreed timing. Resolve the existing live automation by its exact title; the configuration omits private account and automation identifiers. Do not enable or duplicate a schedule merely by reading this skill. The Monday agenda is part of the existing daily run, not a separate automation.
+Keep all workflow instructions in this skill and its references. Manage frequency, run time, timezone and enabled status only in the app; do not mirror them in a repository schedule file. Resolve the existing automation by the title `Daily Briefing` before updating it, and never create a duplicate. Reading or publishing this skill does not authorise a run or schedule change.
 
-When Craig requests scheduling or changes the briefing's sources, verify access to the required connectors and update the existing live automation. Record the confirmed timezone/cadence in the configuration, keeping private identifiers out of the repository. Preserve the one-run prompt and canonical-source fallback. A repository edit alone does not update a live automation. Never create a duplicate when an existing Daily Briefing automation can be updated.
+To recreate a deleted event when Craig requests it, verify required connector access, use the title above and the invocation below, and use Craig's chosen timing in the app. Do not infer the latest schedule from repository history. A repository edit does not change a live event.
+
+> Read https://github.com/cjmyles/personal-ai/blob/main/plugins/personal-todo/skills/daily-briefing/SKILL.md through the connected GitHub app and run the briefing, loading its required skills and references from the same repository. If the canonical instructions cannot be read, report that failure rather than using remembered or stale instructions.
