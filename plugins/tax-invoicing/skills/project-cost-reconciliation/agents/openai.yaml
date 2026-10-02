@@ -1,0 +1,6 @@
+interface:
+  display_name: "Project Cost Reconciliation"
+  short_description: "Reconcile shared project costs and partner balances"
+  default_prompt: "Use $project-cost-reconciliation to reconcile project costs, update the ledger and report partner balances."
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"

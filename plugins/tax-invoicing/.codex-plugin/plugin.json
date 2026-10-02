@@ -1,24 +1,26 @@
 {
   "name": "tax-invoicing",
-  "version": "0.1.1",
-  "description": "Tax bookkeeping, card-statement and invoice reconciliation workflows.",
+  "version": "0.2.0",
+  "description": "Tax bookkeeping, invoice reconciliation and shared project-cost workflows.",
   "author": {
     "name": "Craig Myles"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "Tax & Invoicing",
-    "shortDescription": "Manage tax records, invoices and payments.",
-    "longDescription": "Tax receipts and evidence, conservative card-statement matching, spending review, repayment tracking and invoice reconciliation. Uses private configuration and preserves review and authorisation boundaries.",
+    "shortDescription": "Manage tax, invoices and shared project costs.",
+    "longDescription": "Tax receipts and evidence, conservative card-statement matching, spending review, repayment tracking and invoice reconciliation. Uses private configuration and preserves review and authorisation boundaries. Project Cost Reconciliation allocates evidenced supplier charges by project, checks partner contributions and maintains a private ledger with linked monthly reviews.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [
       "Tax records",
-      "Invoice reconciliation"
+      "Invoice reconciliation",
+      "Project cost reconciliation"
     ],
     "defaultPrompt": [
       "Use $tax-ledger to run a read-only review of my tax receipts.",
-      "Use $invoice-ledger to reconcile my invoices and payments without changing anything."
+      "Use $invoice-ledger to reconcile my invoices and payments without changing anything.",
+      "Use $project-cost-reconciliation to reconcile my project costs and update partner balances."
     ],
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"
@@ -27,6 +29,8 @@
     "tax",
     "invoices",
     "bookkeeping",
-    "receipts"
+    "receipts",
+    "project-costs",
+    "shared-expenses"
   ]
 }

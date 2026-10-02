@@ -10,7 +10,7 @@ The global customisation file is tracked at `codex/global/AGENTS.md`; the live c
 
 Use short, descriptive Title Case display names. Give each single-skill plugin and its skill the same display name. Use an umbrella name for a multi-skill plugin and specific names for its skills. Use matching lowercase hyphenated plugin identifiers, skill invocation names and directory names: personal-todo, cafe-picker, email-assistant, fpl-draft, tv-movies and document-style-guide. Tax & Invoicing uses tax-invoicing with tax-ledger and invoice-ledger skills. Update manifests, marketplace entries, prompts and references together when renaming. Keep the main SKILL.md heading consistent with the skill display name.
 
-The approved display names are Café Picker, Email Assistant, Personal Todo, Document Style Guide, FPL Draft and TV & Movies. Personal Todo contains Personal Todo and Daily Briefing (`daily-briefing`). Tax & Invoicing contains Tax Ledger and Invoice Ledger.
+The approved display names are Café Picker, Email Assistant, Personal Todo, Document Style Guide, FPL Draft and TV & Movies. Personal Todo contains Personal Todo and Daily Briefing (`daily-briefing`). Tax & Invoicing contains Tax Ledger, Invoice Ledger and Project Cost Reconciliation.
 
 Explicitly configure both `interface.logo` and `interface.composerIcon` in every personal plugin manifest, and both `interface.icon_small` and `interface.icon_large` in every packaged skill's `agents/openai.yaml`. Use identical artwork for a plugin and its skills, including multi-skill plugins. Keep paths relative to the plugin or skill root, make every referenced asset available inside its package, and verify matching copies have identical contents.
 
