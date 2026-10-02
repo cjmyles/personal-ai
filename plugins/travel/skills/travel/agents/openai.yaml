@@ -1,0 +1,6 @@
+interface:
+  display_name: "Travel"
+  short_description: "Passport checks, bookings, check-in and free seats"
+  default_prompt: "Use $travel to prepare my trip, check which passport to use and find suitable free seats."
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"

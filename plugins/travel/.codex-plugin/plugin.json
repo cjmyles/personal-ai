@@ -1,0 +1,36 @@
+{
+  "name": "travel",
+  "version": "0.1.0",
+  "description": "Passport reminders, saved-document retrieval, bookings, check-in and free seat preferences.",
+  "author": {
+    "name": "Craig Myles",
+    "url": "https://github.com/cjmyles"
+  },
+  "homepage": "https://github.com/cjmyles/personal-ai",
+  "repository": "https://github.com/cjmyles/personal-ai",
+  "keywords": [
+    "travel",
+    "passport",
+    "check-in",
+    "seats"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Travel",
+    "shortDescription": "Prepare trips, choose passports and find free seats.",
+    "longDescription": "Retrieve existing travel documents, check official entry rules, remind which passport to use before booking and check-in, and manage free seat preferences. Uses existing connected services.",
+    "developerName": "Craig Myles",
+    "category": "Productivity",
+    "capabilities": [
+      "Passport reminders",
+      "Travel documents",
+      "Check-in and seats"
+    ],
+    "defaultPrompt": [
+      "Use $travel to prepare my trip and remind me which passport to use."
+    ],
+    "brandColor": "#167D91",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}
