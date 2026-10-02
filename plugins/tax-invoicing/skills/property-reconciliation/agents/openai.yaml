@@ -1,0 +1,6 @@
+interface:
+  display_name: "Property Reconciliation"
+  short_description: "Reconcile rental income, payouts and property costs"
+  default_prompt: "Use $property-reconciliation to reconcile my property income, agent payouts and expenses."
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"

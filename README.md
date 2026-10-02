@@ -24,7 +24,7 @@ The installer backs up an existing skill with the same generic name before repla
 
 The **Football** plugin packages Daily Football Briefing, Football News, Football Results, Football Fixtures and FPL Draft. Its existing machine identifier `fpl-draft` and repository path are retained for compatibility. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
 
-The `tax-invoicing` plugin is the canonical home of `tax-ledger`, `invoice-ledger` and `project-cost-reconciliation`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.
+The `tax-invoicing` plugin is the canonical home of `tax-ledger`, `invoice-ledger`, `project-cost-reconciliation` and `property-reconciliation`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.
 
 The `email-assistant` plugin (Email Assistant) contains the `email-assistant` skill for drafting and sending email in Craig's preferred voice and Trebuchet MS formatting. It uses the available email integration rather than bundling credentials or a mail connector.
 
