@@ -22,7 +22,7 @@ Run `./codex/scripts/validate.sh`, then `./codex/scripts/install.sh`.
 
 The installer backs up an existing skill with the same generic name before replacing it. Legacy `craig-*` skills remain installed until removed deliberately.
 
-The `fpl-draft` plugin is the canonical home of the `fpl-draft` skill. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
+The **Football** plugin packages Daily Football Briefing, Football News, Football Results, Football Fixtures and FPL Draft. Its existing machine identifier `fpl-draft` and repository path are retained for compatibility. Install the repository marketplace, then install `fpl-draft@personal` to expose it as a plugin.
 
 The `tax-invoicing` plugin is the canonical home of `tax-ledger` and `invoice-ledger`, including all supporting references. It packages the workflows together; Gmail, Google Drive and the configured invoicing service still require their own access.
 
@@ -34,8 +34,8 @@ The `document-style-guide` plugin is the canonical home of the `document-style-g
 
 The `tv-movies` plugin (TV & Movies) tracks films and TV shows, viewing progress, ratings and notes. Install `tv-movies@personal` from the Personal marketplace. Its canonical viewing record is the `TV & Movies` Google spreadsheet in the `ChatGPT` folder in Craig's connected Google Drive; all installations read and update that shared spreadsheet. Viewing records are no longer stored in this repository.
 
-## FPL Draft workflow assets
+## Football workflow assets
 
 The [FPL Draft skill](plugins/fpl-draft/skills/fpl-draft/SKILL.md) reads live Draft league data and official team news, records decisions and outcomes in [Google Sheets](https://docs.google.com/spreadsheets/d/1JrauLxOESM6MO--1jzzkNhR7J4GtN97QjAWRxKKfQ1E/edit), and maintains one concise [Notion dashboard](https://app.notion.com/p/3e0fc8ce55dd81598575e2ac1f649d4d). The [reporting contract](plugins/fpl-draft/skills/fpl-draft/references/reporting-and-learning.md) documents asset ownership, data schemas and failure handling. Reports adapt to live gameweek deadlines; team changes always require Craig’s explicit approval.
 
-The [FPL Draft Daily Briefing](plugins/fpl-draft/skills/fpl-draft-daily-briefing/SKILL.md) handles the daily interaction using FPL Draft, including quiet-day confirmations and spoiler-free Thrillr ratings. [Daily Briefing](plugins/personal-todo/skills/daily-briefing/SKILL.md) handles the personal agenda using Personal Todo. Both scheduled events only load their canonical briefing skill; manage timing and frequency in the app. Each skill documents how to recreate its invocation without duplicating schedule settings in the repository.
+The [Daily Football Briefing](plugins/fpl-draft/skills/daily-football-briefing/SKILL.md) composes the report in the order News, Results, Upcoming fixtures, Draft. It uses [Football News](plugins/fpl-draft/skills/football-news/SKILL.md), [Football Results](plugins/fpl-draft/skills/football-results/SKILL.md), [Football Fixtures](plugins/fpl-draft/skills/football-fixtures/SKILL.md) and FPL Draft. Results are spoiler-free Thrillr ratings for games completed since the last successful briefing; fixtures cover the next Arbroath, Tottenham and Scotland senior men’s games without a look-ahead limit. The old briefing skill redirects to the new one. [Daily Briefing](plugins/personal-todo/skills/daily-briefing/SKILL.md) handles the personal agenda using Personal Todo. Both scheduled events only load their canonical briefing skill; manage timing and frequency in the app. Each skill documents how to recreate its invocation without duplicating schedule settings in the repository.

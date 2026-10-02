@@ -1,0 +1,4 @@
+interface:
+  display_name: "Football News"
+  short_description: "Verified football headlines without match spoilers"
+  default_prompt: "Use $football-news to find the significant football news since my last briefing."

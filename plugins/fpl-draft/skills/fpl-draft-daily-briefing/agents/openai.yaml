@@ -1,6 +1,6 @@
 interface:
-  icon_small: "./assets/pl-lion.png"
-  icon_large: "./assets/pl-lion.png"
-  display_name: "FPL Draft Daily Briefing"
-  short_description: "Daily Draft updates and spoiler-free match ratings"
-  default_prompt: "Use $fpl-draft-daily-briefing to run my FPL Draft Daily Briefing."
+  display_name: "Daily Football Briefing (Legacy)"
+  short_description: "Compatibility entry for saved Draft briefing prompts"
+  default_prompt: "Use $fpl-draft-daily-briefing to run my Daily Football Briefing."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Football Results"
+  short_description: "Spoiler-free ratings for newly completed matches"
+  default_prompt: "Use $football-results to show new spoiler-free football match ratings."

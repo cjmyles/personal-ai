@@ -1,0 +1,4 @@
+interface:
+  display_name: "Daily Football Briefing"
+  short_description: "Football news, ratings, fixtures and Draft in one briefing"
+  default_prompt: "Use $daily-football-briefing to run my Daily Football Briefing."

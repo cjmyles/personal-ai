@@ -1,0 +1,4 @@
+interface:
+  display_name: "Football Fixtures"
+  short_description: "Next Arbroath, Tottenham and Scotland fixtures"
+  default_prompt: "Use $football-fixtures to show my teams’ next fixtures."

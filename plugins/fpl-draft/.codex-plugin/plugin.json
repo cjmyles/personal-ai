@@ -1,7 +1,7 @@
 {
   "name": "fpl-draft",
-  "version": "0.3.0",
-  "description": "League-aware Draft decisions, daily reports and Google Sheets learning with a concise Notion dashboard.",
+  "version": "0.4.0",
+  "description": "Football news, spoiler-free match ratings, upcoming fixtures and league-aware FPL Draft analysis.",
   "author": {
     "name": "Craig Myles",
     "url": "https://github.com/cjmyles"
@@ -13,13 +13,17 @@
     "fantasy-draft",
     "premier-league",
     "waivers",
-    "injuries"
+    "injuries",
+    "football",
+    "news",
+    "fixtures",
+    "match-ratings"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "FPL Draft",
-    "shortDescription": "League-aware waivers, injuries and team selection.",
-    "longDescription": "Manage a closed-market Premier League Fantasy Draft league using live ownership, available players, fixtures, injury-return evidence and waiver priority. FPL Draft Daily Briefing handles daily reports and spoiler-free Thrillr ratings using the main FPL Draft skill.",
+    "displayName": "Football",
+    "shortDescription": "News, match ratings, fixtures and FPL Draft.",
+    "longDescription": "Daily Football Briefing brings together Football News, Football Results, Football Fixtures and FPL Draft. Follow the biggest verified stories, spoiler-free viewing ratings, Arbroath/Tottenham/Scotland fixtures and closed-market Draft decisions with the existing Sheet and dashboard.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [
@@ -27,10 +31,10 @@
       "Web search"
     ],
     "defaultPrompt": [
-      "Review my FPL Draft squad and available players.",
-      "Find injury-return waiver targets in my league.",
-      "Check my proposed waivers and rank the alternatives.",
-      "Use $fpl-draft-daily-briefing to run my FPL Draft Daily Briefing."
+      "Use $daily-football-briefing to run my Daily Football Briefing.",
+      "Show the latest football headlines without spoilers.",
+      "Show my teams\u2019 next fixtures.",
+      "Review my FPL Draft squad and waiver opportunities."
     ],
     "brandColor": "#38003C",
     "composerIcon": "./assets/pl-lion.png",

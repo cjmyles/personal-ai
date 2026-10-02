@@ -10,7 +10,7 @@ The Sheet is the canonical structured record. Notion is one ordinary page, not a
 
 ## Select the report from live deadlines
 
-Use [FPL Draft Daily Briefing](../../fpl-draft-daily-briefing/SKILL.md) for daily report selection, visible completion messages, deadline-check mode and Thrillr ratings. Scheduling is controlled only in the app. For an ad hoc request, answer the requested question using the analysis and record rules below.
+Use [Daily Football Briefing](../../daily-football-briefing/SKILL.md) for the combined report and [Draft daily review](daily-review.md) for Draft report selection and deadline-check mode. Results and news each own a reusable delivery checkpoint in Runs. Scheduling is controlled only in the app. For an ad hoc request, answer the requested question using the analysis and record rules below.
 
 ## Sheet contract
 
