@@ -1,10 +1,10 @@
 ---
 name: travel
-description: Help the user plan and book travel, choose the correct passport, retrieve saved IDs and visas, manage reservations, check in and select free seats. Use whenever discussing booking flights, upcoming trips, travel documents, dual nationality, airline check-in or seating. Proactively remind the user which passport to use before booking and check-in.
+description: Help the user plan and book travel, choose the correct passport, retrieve saved IDs and visas, manage reservations, check in and select free seats. Use for all travel and transport: trains, buses, trams, ferries, flights, taxis, driving, route planning, live departures, delays, bookings, travel documents, airline check-in and seating. Proactively remind the user which passport to use before booking and check-in.
 ---
 # Travel
 
-Prepare each journey using current bookings, original travel documents and official entry rules. Read references/preferences.md for instructions for resolving private preferences and documents. Follow the document-style-guide for any document deliverable.
+Prepare each journey using current live transport information, bookings, original travel documents and official entry rules. Read references/preferences.md for instructions for resolving private preferences and documents. Follow the document-style-guide for any document deliverable.
 
 ## Find existing information first
 
@@ -37,3 +37,15 @@ If better free seats are unavailable, retain the best confirmed acceptable seats
 ## Speak to support naturally
 
 When authorised to speak on the user’s behalf, write short, natural first-person messages in their voice. Ask one focused question or make one concrete request at a time; provide booking details once and repeat constraints only when relevant. Avoid robotic summaries, capitalised demands and unnecessary technical questions. Answer direct questions about acting on behalf of the user honestly. Never invent personal experiences or verification answers.
+
+## Ground transport and live travel information
+
+For trains, buses, trams, ferries, taxis, driving and multi-modal connections, treat the user's request as an operational journey-planning task. Resolve the local date and time, origin, destination, requested window and any previously stated constraints. For urgent travel, prioritise the next catchable option.
+
+Consult the transport operator's live departures or journey planner first and cross-check with a second reliable source when possible. Automatically try alternative sources if the first is incomplete or stale; do not make the user prompt again. Distinguish live updates from scheduled timetable data. Never invent a departure, platform, stop, destination, fare, journey time or delay.
+
+For train departures, give departure time, arrival at the requested station, **displayed final destination**, platform and live status where available. The destination is the end of the service, not a station it passes *via*. Include trains continuing beyond the requested stop. Cover the full requested window, filter out services already departed, and preserve earlier constraints in follow-ups. A question such as 'Destination on each' requires destinations for every previously listed service, not a route explanation.
+
+For other transport, report the equivalent actionable fields: route or service number, departure/pick-up and arrival times, stop/terminal, live disruption and transfer requirements. For driving, use current routing/traffic when available, distinguishing estimates from guarantees.
+
+Before responding, check that the answer covers every requested field and the entire time window. If any field cannot be verified, mark it individually as unverified and give the best confirmed alternatives. Do not present a partial timetable as complete or stop at an apology while other sources remain available. Lead with useful results, then concise caveats and direct official links.
