@@ -87,14 +87,27 @@ For bills, renewals and dated personal reminders, read and follow [Linked remind
 
 - When carrying out authorised work on an existing tracked task, updating its card is part of completing that work; do not require a separate request. Record verified correspondence and outcomes, comparable quote amounts (including GST and optional extras where relevant), decisions, responsibility and next actions. Link to supporting records and distinguish drafts, sent requests, proposals and accepted commitments.
 - If Craig points out that the task record is stale or an update was omitted, treat that as a request to correct it. Reconcile the relevant verified events, preserve earlier history and mark retrospective entries clearly; do not invent event times.
-- Read the card and its checklists before editing, then re-fetch after editing to verify the current brief and history were saved. If a connector limit prevents a complete update, preserve existing content and report the blocker rather than silently truncating history or claiming completion.
+- Read the card and its checklists before editing, then re-fetch after editing to verify the current brief and history were saved. Check the proposed description length before saving and apply the capacity workflow below before a limit blocks the update.
 
 - Keep the card description as the current task brief and next actions, followed by an `Update history` section.
 - For every progress update, correspondence, quote, decision, blocker, hand-off, or completion, append a new entry to `Update history` in the description. Label it `YYYY-MM-DD HH:mm TZ`, using the verified current time in Craig's timezone. Use `UTC` explicitly if his timezone cannot be resolved.
 - If the event happened at a different known time, record that event time instead. Do not invent an unknown time.
-- Preserve all existing description content and earlier history entries. Do not overwrite or delete old updates. When changing the current task brief or next actions, add a history entry explaining the material change.
-- Use a Trello comment instead only when the connected Trello tools support comments and Craig specifically requests one.
-- Do not rewrite earlier history. Backfill omissions only when Craig requests a correction, including by pointing out a stale record.
+- Preserve useful facts and the complete historical record. Compact repeated or superseded current-brief prose; do not retain obsolete draft/next-action wording as current. When changing the current brief, append a dated explanation. Relocate older history only through the verified capacity workflow below.
+- Use comments when Craig requests them, and automatically as the capacity fallback below under his 12 October 2026 instruction. Routine short updates may remain in description history.
+- Do not rewrite historical facts or event times. Backfill omissions only when Craig requests a correction, including by pointing out a stale record.
+
+## Keep descriptions concise and within capacity
+
+Craig authorised automatic compaction on 12 October 2026; do not ask again during normal authorised task updates.
+
+- Keep the current brief focused on status, next actions, responsibility, material figures/deadlines and source links. Aim for 1,000–3,000 characters excluding reminder/state JSON and history. Avoid repeating full policy comparisons, emails or evidence already linked elsewhere.
+- Keep ordinary history entries to one or two sentences, usually 150–400 characters plus source/event IDs. Record only the change; do not repeat the entire current brief in every entry.
+- Preflight the complete proposed description against Trello's 16,384-character limit. At 12,000 characters, or when the next update would exceed capacity, compact before writing; target under 10,000 characters to leave headroom.
+- First remove repeated/superseded prose from the current brief, preserving material facts, latest responsibility, source links, checklist distinctions and all Linked reminders/run-state JSON. Never truncate JSON or discard deduplication markers.
+- If history still leaves insufficient room, move the oldest complete history entries verbatim into dated archive comments on the same card. Use bounded chunks below the connector's comment limit, splitting at entry boundaries; number chunks and identify the original date range. Read back every archive comment before removing that text from the description.
+- Keep a concise historical summary, recent history and links to archive comments in the description. Preserve message IDs with their archived entries; before email reconciliation, check linked archive comments too so archived events are not processed again.
+- Re-read the card immediately before writing. If it changed, preserve intervening edits and rebuild the compaction. Read back the description, dedicated checklist and archive comments; verify the latest update and complete historical coverage.
+- If comments are unavailable, preserve older material in an existing linked durable document only when that destination and write access are verified; save and read back it before replacing history with a link. If neither archive route works, compact only repeated current prose, preserve history and report the precise remaining failure. Never silently truncate or call an unsaved update complete.
 
 ## Track Responsibility and Status
 
