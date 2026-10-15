@@ -1,0 +1,28 @@
+{
+  "notice": "Illustrative example data for the document template, not measured results.",
+  "columns": {
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "values": [
+      50,
+      25,
+      75,
+      60,
+      85,
+      100
+    ],
+    "unit": "%"
+  },
+  "progress": [
+    25,
+    50,
+    75,
+    100
+  ]
+}

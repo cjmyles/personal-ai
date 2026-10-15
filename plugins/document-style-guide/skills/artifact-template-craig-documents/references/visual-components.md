@@ -2,6 +2,8 @@
 
 Read this guide and open `assets/source-preview.jpg` whenever a document needs a graph, percentage indicator, numbered explainer, callout or quotation. Follow the original [Gradient annual report cover template](https://www.magnific.com/free-vector/gradient-annual-report-cover-template_2446649.htm) while retaining Craig's approved Word typography and layout. Use components only when they help explain the content; they are available patterns, not a requirement to add graphics to every document.
 
+The adapted Word and PDF sample demonstrates a column chart and numbered explainers on page 6, percentage rings on page 7, and editable message panels on page 8. The illustrative values are retained in `assets/example-data.json`; they are demonstration data, not measured results.
+
 ## Shared visual system
 
 Use white page backgrounds, the retained pink-to-purple gradient, deep purple headings and generous whitespace. Reuse or sample the retained artwork to match its colours; use the approved heading purple #71218A consistently. Keep Montserrat throughout: Black for major titles and prominent figures, SemiBold for labels and H2s, Regular for explanatory copy. Avoid default chart fonts and generic blue chart palettes. Small supporting labels may use 9–10 pt type where legible at final size; callout body text should normally remain 10.5–11 pt.
