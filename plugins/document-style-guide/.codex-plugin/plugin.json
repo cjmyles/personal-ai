@@ -1,7 +1,7 @@
 {
   "name": "document-style-guide",
-  "version": "0.1.0+codex.20260910023657",
-  "description": "Document structure, writing style and readable message formatting.",
+  "version": "0.2.0",
+  "description": "Document structure, writing style and reusable Word and PDF templates.",
   "author": {
     "name": "Craig Myles",
     "url": "https://github.com/cjmyles"
@@ -10,16 +10,18 @@
   "interface": {
     "displayName": "Document Style Guide",
     "shortDescription": "Clear structure, references and readable paragraphs.",
-    "longDescription": "Apply context-first document structure, plain British English, references, appendices and minimal edits. Keep every assistant reply readable with clear paragraph spacing.",
+    "longDescription": "Apply context-first document structure, plain British English, references, appendices and minimal edits. Keep every assistant reply readable with clear paragraph spacing. Create polished Word documents and PDFs with a gradient cover, linked contents, readable typography, consistent footers and a closing page.",
     "developerName": "Craig Myles",
     "category": "Productivity",
     "capabilities": [
       "Document writing",
-      "Document editing"
+      "Document editing",
+      "Word and PDF templates"
     ],
     "defaultPrompt": [
       "Use $document-style-guide to write this document.",
-      "Use $document-style-guide to edit this document with minimal changes."
+      "Use $document-style-guide to edit this document with minimal changes.",
+      "Use $artifact-template-craig-documents to create a polished document for sharing."
     ],
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"

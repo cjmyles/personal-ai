@@ -1,0 +1,8 @@
+interface:
+  display_name: "Document Template"
+  short_description: "Polished Word and PDF documents with a consistent layout"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  default_prompt: "Use $artifact-template-craig-documents to create a document with this template."
+policy:
+  allow_implicit_invocation: true
