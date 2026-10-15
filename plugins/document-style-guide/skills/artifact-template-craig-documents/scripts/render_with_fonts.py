@@ -1,4 +1,6 @@
 """Render a document with this template's retained Montserrat fonts."""
+# Visual source: https://www.magnific.com/free-vector/gradient-annual-report-cover-template_2446649.htm
+# Graphic component guidance: ../references/visual-components.md
 import argparse
 import os
 from pathlib import Path
